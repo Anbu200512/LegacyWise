@@ -1,0 +1,233 @@
+.resources-page .resources-hero {
+  background-color: #f8f6f0;
+}
+
+.resources-page .resource-card,
+.resources-page .resource-checklist-card {
+  border: 1px solid rgb(148 163 184 / 0.2);
+  border-radius: 1.2rem;
+  background: #fff;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgb(26 54 93 / 0.055);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.resources-page .resource-card:hover,
+.resources-page .resource-checklist-card:hover {
+  transform: translateY(-3px);
+  border-color: rgb(184 148 74 / 0.45);
+  box-shadow: 0 14px 32px rgb(26 54 93 / 0.1);
+}
+
+.resources-page .checklist-progress {
+  max-width: 32rem;
+  margin: 0 0 1.5rem auto;
+}
+
+.resources-page .checklist-progress-track {
+  height: 0.55rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgb(148 163 184 / 0.25);
+}
+
+.resources-page .checklist-progress-track span {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #4a5d4a, #b8944a);
+  transition: width 220ms ease;
+}
+
+.resources-page .resource-feature-image {
+  position: relative;
+  overflow: hidden;
+  min-height: 18rem;
+  aspect-ratio: 4 / 3;
+  border: 1px solid rgb(184 148 74 / 0.25);
+  border-radius: 1.4rem;
+  background: #e8e4d9;
+  box-shadow: 0 18px 42px rgb(26 54 93 / 0.13);
+}
+
+.resources-page .resource-feature-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.resources-page .resource-feature-image figcaption {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 1px solid rgb(255 255 255 / 0.35);
+  border-radius: 0.85rem;
+  background: rgb(17 24 39 / 0.78);
+  padding: 0.9rem 1rem;
+  color: #fff;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  backdrop-filter: blur(10px);
+}
+
+.resources-page .resource-feature-image figcaption i {
+  flex: 0 0 auto;
+  color: #e5c783;
+}
+
+.resources-page .resource-checklist label:has(input:checked) {
+  color: #6b7280;
+}
+
+.resources-page .resource-checklist input:focus-visible {
+  outline: 2px solid #b8944a;
+  outline-offset: 3px;
+}
+
+.resources-page main > section,
+.resources-page main > section > div,
+.resources-page .resource-card,
+.resources-page .resource-checklist-card {
+  min-width: 0;
+}
+
+.dark .resources-page .resource-card,
+.dark .resources-page .resource-checklist-card {
+  border-color: rgb(148 163 184 / 0.15);
+  background: #202b39;
+}
+
+.resources-page .resource-card-icon {
+  display: inline-flex;
+  width: 3rem;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.85rem;
+  background: rgb(184 148 74 / 0.14);
+  color: #1a365d;
+  margin-bottom: 1.25rem;
+}
+
+.dark .resources-page .resource-card-icon {
+  color: #e5c783;
+}
+
+.resources-page .resource-checklist {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.resources-page .resource-checklist label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  color: #4b5563;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  cursor: pointer;
+}
+
+.dark .resources-page .resource-checklist label {
+  color: #d1d5db;
+}
+
+.resources-page .resource-checklist input {
+  flex: 0 0 auto;
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.15rem;
+  accent-color: #1a365d;
+}
+
+.resources-page .resource-event {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  min-height: 4rem;
+  border: 1px solid rgb(148 163 184 / 0.2);
+  border-radius: 0.9rem;
+  background: #fff;
+  padding: 1rem;
+  color: #374151;
+  font-size: 0.9rem;
+}
+
+.dark .resources-page .resource-event {
+  border-color: rgb(148 163 184 / 0.15);
+  background: #202b39;
+  color: #d1d5db;
+}
+
+@media (max-width: 767px) {
+  .resources-page .checklist-progress {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .resources-page .resource-checklist-card,
+  .resources-page .resource-card {
+    padding: 1.2rem;
+  }
+
+  .resources-page .resource-feature-image {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+
+  .resources-page .resource-feature-image figcaption {
+    right: 0.65rem;
+    bottom: 0.65rem;
+    left: 0.65rem;
+    gap: 0.55rem;
+    padding: 0.7rem 0.75rem;
+    font-size: 0.82rem;
+  }
+
+  .resources-page #print-checklist {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .resources-page .resource-cta-card > div:last-child {
+    flex-direction: column;
+  }
+
+  .resources-page .resource-cta-card > div:last-child a {
+    width: 100%;
+  }
+}
+
+@media print {
+  .resources-page nav,
+  .resources-page footer,
+  .resources-page .resources-hero,
+  .resources-page .print-control,
+  .resources-page main > section:not(#planning-checklist),
+  .resources-page #notification-container {
+    display: none !important;
+  }
+
+  .resources-page,
+  .resources-page #planning-checklist {
+    background: #fff !important;
+    color: #111827 !important;
+  }
+
+  .resources-page .resource-checklist-card {
+    break-inside: avoid;
+    border-color: #9ca3af !important;
+    box-shadow: none !important;
+  }
+
+  .resources-page input[type="checkbox"] {
+    print-color-adjust: exact;
+  }
+}

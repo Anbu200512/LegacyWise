@@ -1,0 +1,249 @@
+nav.site-nav {
+  background-color: rgb(255 255 255 / 0.94);
+  border-bottom-color: rgb(184 148 74 / 0.24);
+  box-shadow: 0 8px 24px rgb(26 54 93 / 0.055);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  transition: background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.dark nav.site-nav {
+  background-color: rgb(17 24 39 / 0.94);
+  border-bottom-color: rgb(184 148 74 / 0.25);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.18);
+}
+
+nav.site-nav a,
+nav.site-nav button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dark nav.site-nav a[aria-label="LegacyWise home"] img {
+  filter: brightness(0) invert(1);
+}
+
+nav.site-nav :is(a, button):focus-visible {
+  outline: 2px solid #b8944a;
+  outline-offset: 3px;
+  border-radius: 0.5rem;
+}
+
+nav.site-nav [class~="xl:flex"] > a:not([class*="bg-"]),
+nav.site-nav [class~="xl:flex"] > div > button {
+  position: relative;
+  padding-top: 0.65rem;
+  padding-bottom: 0.65rem;
+}
+
+nav.site-nav [class~="xl:flex"] > a:not([class*="bg-"])::after,
+nav.site-nav [class~="xl:flex"] > div > button::after {
+  position: absolute;
+  right: 0;
+  bottom: 0.3rem;
+  left: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: #b8944a;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 180ms ease;
+}
+
+@media (min-width: 1280px) {
+  nav.site-nav [class~="xl:flex"] {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  nav.site-nav [class~="xl:flex"] > div:first-child {
+    margin-inline-start: auto;
+  }
+
+  nav.site-nav [class~="xl:flex"] > a[href="contact.html"]:not([class~="bg-navy"]) {
+    margin-inline-end: auto;
+  }
+}
+
+nav.site-nav [class~="xl:flex"] > a:not([class~="bg-navy"]):hover::after,
+nav.site-nav [class~="xl:flex"] > div > button:hover::after {
+  transform: scaleX(1);
+}
+
+nav.site-nav a[href="contact.html"][class~="bg-navy"] {
+  border: 1px solid rgb(184 148 74 / 0.35);
+  border-radius: 0.65rem;
+  box-shadow: 0 5px 14px rgb(26 54 93 / 0.15);
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+nav.site-nav a[href="contact.html"][class~="bg-navy"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgb(26 54 93 / 0.2);
+}
+
+nav.site-nav button[id="theme-toggle"],
+nav.site-nav button[id="dir-toggle"],
+nav.site-nav button[id="mobile-menu-btn"] {
+  display: inline-flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 0.7rem;
+  transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease;
+}
+
+nav.site-nav button[id="theme-toggle"]:hover,
+nav.site-nav button[id="dir-toggle"]:hover,
+nav.site-nav button[id="mobile-menu-btn"]:hover {
+  border-color: rgb(184 148 74 / 0.3);
+  background: rgb(184 148 74 / 0.1);
+}
+
+nav.site-nav .dropdown-menu {
+  border-color: rgb(184 148 74 / 0.25);
+  border-radius: 0.85rem;
+  padding: 0.4rem;
+  box-shadow: 0 16px 36px rgb(15 23 42 / 0.16);
+}
+
+nav.site-nav .dropdown-menu a {
+  border-radius: 0.55rem;
+}
+
+nav.site-nav #mobile-menu {
+  border-color: rgb(184 148 74 / 0.22);
+  background: rgb(255 255 255 / 0.98);
+  box-shadow: 0 18px 32px rgb(15 23 42 / 0.12);
+}
+
+nav.site-nav #mobile-menu > div {
+  display: grid;
+  gap: 0.3rem;
+  padding: 0.9rem 1rem 1.1rem;
+  background: transparent;
+}
+
+nav.site-nav #mobile-menu > div > * + * {
+  margin-top: 0;
+}
+
+nav.site-nav #mobile-menu > div > a:not([class~="bg-navy"]),
+nav.site-nav #mobile-menu [data-dropdown="mobile-home-dropdown"] {
+  display: flex;
+  min-height: 2.75rem;
+  align-items: center;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid transparent;
+  border-radius: 0.7rem;
+  font-size: 0.95rem;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+nav.site-nav #mobile-menu > div > a:not([class~="bg-navy"]):hover,
+nav.site-nav #mobile-menu [data-dropdown="mobile-home-dropdown"]:hover {
+  border-color: rgb(184 148 74 / 0.2);
+  background: rgb(184 148 74 / 0.09);
+}
+
+nav.site-nav #mobile-menu > div > a[aria-current="page"] {
+  border-color: rgb(184 148 74 / 0.3);
+  background: rgb(184 148 74 / 0.1);
+}
+
+.dark nav.site-nav #mobile-menu {
+  background: rgb(17 24 39 / 0.98);
+}
+
+.dark nav.site-nav #mobile-menu > div {
+  background: transparent;
+}
+
+.dark nav.site-nav #mobile-menu > div > a:not([class~="bg-navy"]):hover,
+.dark nav.site-nav #mobile-menu [data-dropdown="mobile-home-dropdown"]:hover {
+  border-color: rgb(184 148 74 / 0.25);
+  background: rgb(184 148 74 / 0.12);
+}
+
+nav.site-nav .mobile-menu-settings {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.4rem;
+  padding: 0.9rem 0.25rem 0.15rem;
+  border-top: 1px solid rgb(148 163 184 / 0.22);
+}
+
+nav.site-nav .mobile-menu-settings button {
+  display: inline-flex;
+  min-height: 3rem;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  border: 1px solid rgb(148 163 184 / 0.3);
+  border-radius: 0.85rem;
+  background: rgb(248 250 252 / 0.8);
+  color: #1a365d;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: transform 160ms ease, border-color 160ms ease, background-color 160ms ease;
+}
+
+nav.site-nav .mobile-menu-settings button:hover {
+  transform: translateY(-1px);
+  border-color: rgb(184 148 74 / 0.55);
+}
+
+.dark nav.site-nav .mobile-menu-settings {
+  border-top-color: rgb(148 163 184 / 0.18);
+}
+
+.dark nav.site-nav .mobile-menu-settings button {
+  border-color: rgb(148 163 184 / 0.22);
+  background: rgb(31 41 55 / 0.75);
+  color: #e5c783;
+}
+
+nav.site-nav #mobile-menu :is(a, button):focus-visible {
+  outline: 2px solid #b8944a;
+  outline-offset: 2px;
+}
+
+nav.site-nav #mobile-menu .mobile-menu-cta {
+  display: flex;
+  width: fit-content;
+  min-width: 12rem;
+  min-height: 2.9rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0.65rem auto 0.15rem;
+  border: 1px solid rgb(184 148 74 / 0.4);
+  border-radius: 0.8rem;
+  background: #1a365d;
+  padding: 0.75rem 2rem;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 6px 16px rgb(26 54 93 / 0.14);
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+nav.site-nav #mobile-menu .mobile-menu-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 9px 20px rgb(26 54 93 / 0.2);
+}
+
+.dark nav.site-nav #mobile-menu .mobile-menu-cta {
+  background: #b8944a;
+  color: #1a1814;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  nav.site-nav,
+  nav.site-nav *,
+  nav.site-nav #mobile-menu * {
+    transition-duration: 0.01ms !important;
+  }
+}

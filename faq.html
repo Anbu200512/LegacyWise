@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/init.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link href="assets/typography.css" rel="stylesheet">
+    <link href="assets/navigation.css" rel="stylesheet">
+    <link href="assets/footer.css" rel="stylesheet">
+    <link href="assets/cta-variants.css" rel="stylesheet">
+    <link href="assets/faq.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/legacywise-logo.svg">
+    <title>FAQs - LegacyWise Will & Estate Planning</title>
+    <meta name="description" content="Frequently asked questions about wills, trusts, estate planning, and consultations.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode:'class', theme:{ extend:{ colors:{ ivory:'#f8f6f0','ivory-dark':'#1a1814',navy:'#1a365d','navy-light':'#2d4a6b',sage:'#4a5d4a',gold:'#b8944a' }}}}
+    </script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="faq-page bg-white dark:bg-ivory-dark text-gray-900 dark:text-gray-100 transition-colors duration-200">
+    <div id="notification-container" class="fixed top-4 right-4 z-50 space-y-2"></div>
+    <nav class="site-nav bg-white dark:bg-gray-900 shadow-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0"><a href="index.html" class="inline-flex items-center gap-2 text-xl font-semibold text-navy dark:text-gold" aria-label="LegacyWise home"><img src="assets/icons/legacywise-logo.svg" alt="" class="h-9 w-9"><span>LegacyWise</span></a></div>
+                <div class="hidden xl:flex items-center space-x-6">
+                    <div class="relative">
+                        <button data-dropdown="home-dropdown" class="flex items-center text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors">Home<i data-lucide="chevron-down" class="ml-1 w-4 h-4"></i></button>
+                        <div id="home-dropdown" class="dropdown-menu hidden absolute left-0 mt-2 w-48 bg-white dark:bg-gray-900 rounded-md shadow-lg border border-gray-200 dark:border-gray-700 py-1">
+                            <a href="index.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">Home 1</a>
+                            <a href="home2.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">Home 2</a>
+                        </div>
+                    </div>
+                    <a href="about.html" class="text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors">About</a>
+                    <a href="services.html" class="text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors">Services</a>
+                    <a href="resources.html" class="text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors">Resources</a>
+                    <a href="faq.html" class="text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors">FAQs</a>
+                    <a href="contact.html" class="text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors">Contact</a>
+                    <button id="theme-toggle" class="p-2 text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors"><i id="theme-icon" data-lucide="sun" class="w-5 h-5"></i></button>
+                    <button id="dir-toggle" class="p-2 text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors"><i id="dir-icon" data-lucide="arrow-right-left" class="w-5 h-5"></i></button>
+                    <a href="contact.html" class="bg-navy dark:bg-gold text-white dark:text-navy px-4 py-2 rounded-md hover:bg-navy-light dark:hover:bg-yellow-600 transition-colors font-medium">Get Started</a>
+                </div>
+                <div class="xl:hidden flex items-center space-x-2">
+                    <button id="mobile-menu-btn" class="p-2 text-gray-700 dark:text-gray-300"><i id="mobile-menu-icon" data-lucide="menu" class="w-6 h-6"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden xl:hidden border-t border-gray-200 dark:border-gray-700">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-900">
+                <div><button data-dropdown="mobile-home-dropdown" class="w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md flex items-center justify-between">Home<i data-lucide="chevron-down" class="w-4 h-4"></i></button>
+                    <div id="mobile-home-dropdown" class="dropdown-menu hidden pl-4">
+                        <a href="index.html" class="block px-3 py-2 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Home 1</a>
+                        <a href="home2.html" class="block px-3 py-2 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Home 2</a>
+                    </div></div>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">About</a>
+                <a href="services.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Services</a>
+                <a href="resources.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Resources</a>
+                <a href="faq.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">FAQs</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Contact</a>
+                <div class="mobile-menu-settings" aria-label="Display settings">
+                    <button id="theme-toggle" type="button" aria-label="Toggle theme"><i id="theme-icon" data-lucide="sun" class="w-5 h-5"></i></button>
+                    <button id="dir-toggle" type="button" aria-label="Toggle direction"><i id="dir-icon" data-lucide="arrow-right-left" class="w-5 h-5"></i></button>
+                </div>
+                <a href="contact.html" class="mobile-menu-cta">Get Started</a>
+            </div>
+        </div>
+    </nav>
+    
+    <main>
+        <section class="faq-hero relative isolate overflow-hidden bg-ivory dark:bg-gray-900">
+            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1800&h=900&fit=crop" alt="" aria-hidden="true" class="absolute inset-0 -z-20 h-full w-full object-cover" fetchpriority="high">
+            <div class="absolute inset-0 -z-10 bg-gradient-to-r from-ivory/95 via-white/90 to-ivory/65 dark:from-gray-900/95 dark:via-gray-900/85 dark:to-gray-900/65" aria-hidden="true"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center">
+                    <span class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-sage dark:text-gold mb-4"><i data-lucide="circle-help" class="w-4 h-4"></i>Clear answers for planning ahead</span>
+                    <h1 class="text-4xl sm:text-5xl font-semibold text-navy dark:text-gold mb-4">Frequently Asked Questions</h1>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mx-auto mb-8">Browse common questions about wills, trusts, estate planning, and working with LegacyWise. Answers are general information, not personalized legal advice.</p>
+                </div>
+                <div class="faq-search-wrap">
+                    <i data-lucide="search" class="faq-search-icon"></i>
+                    <input type="search" id="faq-search" placeholder="Search questions and answers..." aria-label="Search frequently asked questions" class="w-full border bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-gold focus:outline-none">
+                    <button type="button" id="faq-clear" class="faq-clear-search" aria-label="Clear search" title="Clear search" hidden><i data-lucide="x" class="w-4 h-4"></i></button>
+                </div>
+                <p class="text-sm text-gray-600 dark:text-gray-400 text-center mt-3"><span id="faq-count" class="font-semibold text-navy dark:text-gold" aria-live="polite">12</span> questions</p>
+            </div>
+        </section>
+        
+        <section class="py-12 sm:py-16 bg-white dark:bg-ivory-dark">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-wrap justify-center gap-2 mb-8" role="group" aria-label="Filter questions by topic">
+                    <button type="button" class="faq-category-filter" data-category="all" aria-pressed="true">All questions</button>
+                    <button type="button" class="faq-category-filter" data-category="basics" aria-pressed="false">Planning basics</button>
+                    <button type="button" class="faq-category-filter" data-category="wills-trusts" aria-pressed="false">Wills & trusts</button>
+                    <button type="button" class="faq-category-filter" data-category="updates" aria-pressed="false">Reviews & updates</button>
+                    <button type="button" class="faq-category-filter" data-category="working-together" aria-pressed="false">Working with us</button>
+                </div>
+                <div class="faq-list space-y-4">
+                <!-- 12 questions as specified -->
+                <div class="faq-item" data-category="basics">
+                    <button id="faq-toggle1" class="faq-toggle w-full p-4 text-left flex justify-between items-center" data-target="faq1" aria-controls="faq1" aria-expanded="false">
+                        <span class="faq-question font-medium text-gray-900 dark:text-gray-100">What is estate planning?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-gray-500 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq1" class="faq-answer hidden p-4 pt-0 text-gray-600 dark:text-gray-400 text-sm">Estate planning involves preparing arrangements for managing and distributing assets. It's a general process that may include wills and other documents. Legal requirements vary by jurisdiction.</div>
+                </div>
+                <div class="faq-item" data-category="wills-trusts">
+                    <button id="faq-toggle2" class="faq-toggle w-full p-4 text-left flex justify-between items-center" data-target="faq2" aria-controls="faq2" aria-expanded="false">
+                        <span class="faq-question font-medium text-gray-900 dark:text-gray-100">Why might I need a will?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-gray-500 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq2" class="faq-answer hidden p-4 pt-0 text-gray-600 dark:text-gray-400 text-sm">A will helps document your wishes for asset distribution. Without one, default rules may apply. The specifics depend on applicable law in your jurisdiction.</div>
+                </div>
+                <div class="faq-item" data-category="wills-trusts">
+                    <button id="faq-toggle3" class="faq-toggle w-full p-4 text-left flex justify-between items-center" data-target="faq3" aria-controls="faq3" aria-expanded="false">
+                        <span class="faq-question font-medium text-gray-900 dark:text-gray-100">What information is generally needed to prepare a will?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-gray-500 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq3" class="faq-answer hidden p-4 pt-0 text-gray-600 dark:text-gray-400 text-sm">Generally useful information includes identifying beneficiaries, potential executors, a general overview of assets, and any specific wishes. This varies based on individual circumstances and local requirements.</div>
+                </div>
+                <div class="faq-item" data-category="wills-trusts">
+                    <button id="faq-toggle4" class="faq-toggle w-full p-4 text-left flex justify-between items-center" data-target="faq4" aria-controls="faq4" aria-expanded="false">
+                        <span class="faq-question font-medium text-gray-900 dark:text-gray-100">What is a trust?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-gray-500 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq4" class="faq-answer hidden p-4 pt-0 text-gray-600 dark:text-gray-400 text-sm">A trust is a legal arrangement where assets are held by a trustee for beneficiaries. Trusts serve different purposes; suitability depends on individual circumstances and jurisdictional rules.</div>
+                </div>
+                <div class="faq-item" data-category="wills-trusts">
+                    <button id="faq-toggle5" class="faq-toggle w-full p-4 text-left flex justify-between items-center" data-target="faq5" aria-controls="faq5" aria-expanded="false">
+                        <span class="faq-question font-medium text-gray-900 dark:text-gray-100">What is the difference between a will and a trust?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-gray-500 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq5" class="faq-answer hidden p-4 pt-0 text-gray-600 dark:text-gray-400 text-sm">Wills and trusts are different tools. They may differ in timing, administration, privacy, and scope. Which is appropriate depends on specific goals and applicable law.</div>
+                </div>
+                <div class="faq-item" data-category="wills-trusts">
+                    <button id="faq-toggle6" class="faq-toggle w-full p-4 text-left flex justify-between items-center" data-target="faq6" aria-controls="faq6" aria-expanded="false">
+                        <span class="faq-question font-medium text-gray-900 dark:text-gray-100">Who can be named as an executor?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-gray-500 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq6" class="faq-answer hidden p-4 pt-0 text-gray-600 dark:text-gray-400 text-sm">Generally, a competent adult can be named as executor. Many choose a trusted family member or professional. Requirements may vary by jurisdiction.</div>
+                </div>
+                <div class="faq-item" data-category="updates">
+                    <button id="faq-toggle7" class="faq-toggle w-full p-4 text-left flex justify-between items-center" data-target="faq7" aria-controls="faq7" aria-expanded="false">
+                        <span class="faq-question font-medium text-gray-900 dark:text-gray-100">How often should estate documents be reviewed?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-gray-500 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq7" class="faq-answer hidden p-4 pt-0 text-gray-600 dark:text-gray-400 text-sm">It's good practice to review after major life events (marriage, divorce, birth, death) or every few years. Laws can change over time, so periodic review is advisable.</div>
+                </div>
+                <div class="faq-item" data-category="updates">
+                    <button id="faq-toggle8" class="faq-toggle w-full p-4 text-left flex justify-between items-center" data-target="faq8" aria-controls="faq8" aria-expanded="false">
+                        <span class="faq-question font-medium text-gray-900 dark:text-gray-100">Can estate documents be updated?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-gray-500 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq8" class="faq-answer hidden p-4 pt-0 text-gray-600 dark:text-gray-400 text-sm">Yes. Wills can be amended or replaced. Other documents may be updated as needed. Consult qualified professionals about proper procedures.</div>
+                </div>
+                <div class="faq-item" data-category="basics">
+                    <button id="faq-toggle9" class="faq-toggle w-full p-4 text-left flex justify-between items-center" data-target="faq9" aria-controls="faq9" aria-expanded="false">
+                        <span class="faq-question font-medium text-gray-900 dark:text-gray-100">What happens if someone dies without a will?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-gray-500 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq9" class="faq-answer hidden p-4 pt-0 text-gray-600 dark:text-gray-400 text-sm">If there is no will, intestacy rules typically determine asset distribution. These vary by jurisdiction and may not reflect the person's wishes.</div>
+                </div>
+                <div class="faq-item" data-category="working-together">
+                    <button id="faq-toggle10" class="faq-toggle w-full p-4 text-left flex justify-between items-center" data-target="faq10" aria-controls="faq10" aria-expanded="false">
+                        <span class="faq-question font-medium text-gray-900 dark:text-gray-100">How can I arrange a consultation?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-gray-500 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq10" class="faq-answer hidden p-4 pt-0 text-gray-600 dark:text-gray-400 text-sm">You can request a consultation through our Contact page. The form is for informational/demo purposes; submission does not confirm an appointment.</div>
+                </div>
+                <div class="faq-item" data-category="basics">
+                    <button id="faq-toggle11" class="faq-toggle w-full p-4 text-left flex justify-between items-center" data-target="faq11" aria-controls="faq11" aria-expanded="false">
+                        <span class="faq-question font-medium text-gray-900 dark:text-gray-100">Is estate planning different across jurisdictions?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-gray-500 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq11" class="faq-answer hidden p-4 pt-0 text-gray-600 dark:text-gray-400 text-sm">Yes. Laws, formal requirements, and procedures differ by jurisdiction. It's important to consider local requirements when planning.</div>
+                </div>
+                <div class="faq-item" data-category="working-together">
+                    <button id="faq-toggle12" class="faq-toggle w-full p-4 text-left flex justify-between items-center" data-target="faq12" aria-controls="faq12" aria-expanded="false">
+                        <span class="faq-question font-medium text-gray-900 dark:text-gray-100">How is confidential information handled?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-gray-500 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq12" class="faq-answer hidden p-4 pt-0 text-gray-600 dark:text-gray-400 text-sm">This website does not claim attorney-client privilege or guaranteed confidentiality. The demo form stores minimal data in your browser's localStorage only. We do not collect sensitive financial details.</div>
+                </div>
+            </div>
+            <div id="faq-empty" class="hidden max-w-2xl mx-auto rounded-2xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 p-8 text-center text-gray-600 dark:text-gray-400" role="status">
+                <i data-lucide="search-x" class="w-8 h-8 text-gold mx-auto mb-3"></i>
+                <p class="font-semibold text-gray-900 dark:text-gray-100 mb-1">No matching questions found</p>
+                <p class="text-sm">Try a different search phrase or choose another topic.</p>
+            </div>
+            <div class="max-w-4xl mx-auto px-4 mt-6 text-sm text-gray-600 dark:text-gray-400">
+                <p>Legal requirements vary by jurisdiction. Website content is general information and is not a substitute for advice from a qualified legal professional.</p>
+            </div>
+            <div class="faq-contact-card max-w-4xl mx-auto mt-10 p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
+                <div><h2 class="text-xl sm:text-2xl font-semibold text-navy dark:text-gold mb-2">Still have a question?</h2><p class="text-sm text-gray-600 dark:text-gray-400">We’re happy to help you find the right place to start.</p></div>
+                <a href="contact.html" class="inline-flex shrink-0 items-center gap-2 rounded-lg bg-navy dark:bg-gold px-5 py-3 font-medium text-white dark:text-navy hover:bg-navy-light dark:hover:bg-yellow-600 transition-colors">Request a Consultation<i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="site-footer bg-gray-900 dark:bg-gray-950 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="footer-grid grid md:grid-cols-4 gap-8">
+                <div><a href="index.html" class="footer-brand inline-flex items-center gap-2 text-lg font-semibold mb-4" aria-label="LegacyWise home"><img src="assets/icons/legacywise-logo.svg" alt="" class="h-9 w-9"><span>LegacyWise</span></a><p class="text-sm">Protect Your Legacy. Plan with Confidence.</p><div class="footer-socials" aria-label="Follow LegacyWise"><a href="https://www.linkedin.com/company/legacywise/" target="_blank" rel="noopener noreferrer" aria-label="LegacyWise on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9v10M5 5v.01M9 19v-6a3 3 0 0 1 6 0v6M9 10v9" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a><a href="https://www.facebook.com/legacywise" target="_blank" rel="noopener noreferrer" aria-label="LegacyWise on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 21v-8h3l.5-4H15V7c0-1.2.4-2 2-2h1.7V1.4C18 1.2 17 1 15.5 1 12.3 1 10 3 10 6.7V9H7v4h3v8z" fill="currentColor"></path></svg></a><a href="https://www.instagram.com/legacywise/" target="_blank" rel="noopener noreferrer" aria-label="LegacyWise on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"></rect><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"></circle><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"></circle></svg></a></div><p class="footer-disclaimer text-xs mt-4">General information only - not legal advice.</p></div>
+                <div><h4 class="text-white font-medium mb-3">Quick Links</h4><ul class="space-y-2 text-sm"><li><a href="index.html" class="hover:text-gold">Home</a></li><li><a href="about.html" class="hover:text-gold">About</a></li><li><a href="resources.html" class="hover:text-gold">Resources</a></li><li><a href="services.html" class="hover:text-gold">Services</a></li><li><a href="faq.html" class="hover:text-gold">FAQs</a></li><li><a href="contact.html" class="hover:text-gold">Contact</a></li></ul></div>
+                <div><h4 class="text-white font-medium mb-3">Services</h4><ul class="space-y-2 text-sm"><li><a href="services.html#will-drafting" class="hover:text-gold">Will Drafting</a></li><li><a href="services.html#trust-planning" class="hover:text-gold">Trust Planning</a></li><li><a href="services.html#estate-planning" class="hover:text-gold">Estate Planning Guidance</a></li><li><a href="services.html#document-review" class="hover:text-gold">Estate Document Review</a></li></ul></div>
+                <div><h4 class="text-white font-medium mb-3">Information</h4><p class="text-sm mb-2">Office Hours: Mon-Fri 9:00-17:00</p><p class="text-sm mb-2">Email: info@legacywise.example</p><p class="text-sm">Phone: (555) 123-4567</p></div>
+            </div>
+            <section class="footer-newsletter" aria-labelledby="footer-newsletter-heading"><div><h4 id="footer-newsletter-heading">A little planning wisdom, now and then</h4><p>Get thoughtful prompts and practical estate-planning resources in your inbox.</p></div><div><form class="footer-newsletter-form"><label class="sr-only" for="footer-newsletter-email">Email address</label><input id="footer-newsletter-email" name="email" type="email" autocomplete="email" placeholder="Your email address" required><button type="submit">Join the newsletter</button></form><p class="footer-newsletter-status" aria-live="polite"></p><p class="text-xs">Demo signup only; no email is sent or stored.</p></div></section>
+            <div class="footer-bottom border-t border-gray-800 mt-8 pt-6 text-center text-sm"><p>&copy; 2026 LegacyWise. All rights reserved.</p></div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/faq.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

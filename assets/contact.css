@@ -1,0 +1,116 @@
+.contact-page .contact-section {
+  padding-top: 4.5rem;
+  padding-bottom: 5rem;
+  background: #f8f6f0;
+}
+
+.dark .contact-page .contact-section {
+  background: #1a1814;
+}
+
+.contact-page .contact-layout {
+  align-items: start;
+  gap: 2rem;
+}
+
+.contact-page #contact-form {
+  padding: 1.5rem;
+  border: 1px solid rgb(184 148 74 / 0.24);
+  border-radius: 1.35rem;
+  background: #fff;
+  box-shadow: 0 16px 40px rgb(26 54 93 / 0.08);
+}
+
+.dark .contact-page #contact-form {
+  border-color: rgb(184 148 74 / 0.22);
+  background: #202b39;
+  box-shadow: 0 16px 40px rgb(0 0 0 / 0.22);
+}
+
+.contact-page .contact-form-intro {
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgb(148 163 184 / 0.2);
+}
+
+.contact-page #contact-form label {
+  color: #26384e;
+  font-weight: 600;
+}
+
+.dark .contact-page #contact-form label {
+  color: #e5e7eb;
+}
+
+.contact-page #contact-form input:not([type="checkbox"]),
+.contact-page #contact-form select,
+.contact-page #contact-form textarea {
+  min-height: 2.9rem;
+  border-radius: 0.65rem;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.contact-page #contact-form textarea {
+  min-height: 7rem;
+}
+
+.contact-page #contact-form input:focus,
+.contact-page #contact-form select:focus,
+.contact-page #contact-form textarea:focus {
+  border-color: #b8944a;
+  box-shadow: 0 0 0 3px rgb(184 148 74 / 0.18);
+}
+
+.contact-page #contact-form button[type="submit"] {
+  border-radius: 0.7rem;
+  box-shadow: 0 7px 17px rgb(26 54 93 / 0.15);
+}
+
+.contact-page .contact-sidebar-card {
+  padding: 1.5rem;
+  border: 1px solid rgb(148 163 184 / 0.2);
+  border-radius: 1.15rem;
+  background: #fff;
+  box-shadow: 0 8px 22px rgb(26 54 93 / 0.055);
+}
+
+.dark .contact-page .contact-sidebar-card {
+  border-color: rgb(148 163 184 / 0.15);
+  background: #202b39;
+  box-shadow: 0 8px 22px rgb(0 0 0 / 0.16);
+}
+
+.contact-page .contact-sidebar-card h3 i {
+  flex: 0 0 auto;
+  display: inline-flex;
+  width: 2.25rem;
+  height: 2.25rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.7rem;
+  background: rgb(184 148 74 / 0.14);
+  padding: 0.45rem;
+}
+
+.contact-page #form-status:not(:empty) {
+  border-radius: 0.85rem;
+}
+
+@media (min-width: 640px) {
+  .contact-page #contact-form {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact-page .contact-layout {
+    gap: 2.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-page #contact-form input,
+  .contact-page #contact-form select,
+  .contact-page #contact-form textarea {
+    transition-duration: 0.01ms;
+  }
+}

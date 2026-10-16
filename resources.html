@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/init.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link href="assets/typography.css" rel="stylesheet">
+    <link href="assets/navigation.css" rel="stylesheet">
+    <link href="assets/footer.css" rel="stylesheet">
+    <link href="assets/cta-variants.css" rel="stylesheet">
+    <link href="assets/resources.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/legacywise-logo.svg">
+    <title>Estate Planning Resources | LegacyWise</title>
+    <meta name="description" content="Use LegacyWise planning checklists and conversation prompts to prepare for estate planning discussions.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode:'class', theme:{ extend:{ colors:{ ivory:'#f8f6f0','ivory-dark':'#1a1814',navy:'#1a365d','navy-light':'#2d4a6b',sage:'#4a5d4a',gold:'#b8944a' }}}}
+    </script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="resources-page bg-white dark:bg-ivory-dark text-gray-900 dark:text-gray-100 transition-colors duration-200">
+    <div id="notification-container" class="fixed top-4 right-4 z-50 space-y-2"></div>
+    <nav class="site-nav bg-white dark:bg-gray-900 shadow-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="inline-flex items-center gap-2 text-xl font-semibold text-navy dark:text-gold" aria-label="LegacyWise home"><img src="assets/icons/legacywise-logo.svg" alt="" class="h-9 w-9"><span>LegacyWise</span></a>
+                <div class="hidden xl:flex items-center space-x-6">
+                    <div class="relative">
+                        <button data-dropdown="home-dropdown" class="flex items-center text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors">Home<i data-lucide="chevron-down" class="ml-1 w-4 h-4"></i></button>
+                        <div id="home-dropdown" class="dropdown-menu hidden absolute left-0 mt-2 w-48 bg-white dark:bg-gray-900 rounded-md shadow-lg border border-gray-200 dark:border-gray-700 py-1">
+                            <a href="index.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">Home 1</a>
+                            <a href="home2.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">Home 2</a>
+                        </div>
+                    </div>
+                    <a href="about.html" class="text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors">About</a>
+                    <a href="services.html" class="text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors">Services</a>
+                    <a href="resources.html" aria-current="page" class="text-navy dark:text-gold font-medium">Resources</a>
+                    <a href="faq.html" class="text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors">FAQs</a>
+                    <a href="contact.html" class="text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors">Contact</a>
+                    <button id="theme-toggle" class="p-2 text-gray-700 dark:text-gray-300" aria-label="Toggle theme"><i id="theme-icon" data-lucide="sun" class="w-5 h-5"></i></button>
+                    <button id="dir-toggle" class="p-2 text-gray-700 dark:text-gray-300" aria-label="Toggle direction"><i id="dir-icon" data-lucide="arrow-right-left" class="w-5 h-5"></i></button>
+                    <a href="contact.html" class="bg-navy dark:bg-gold text-white dark:text-navy px-4 py-2 rounded-md hover:bg-navy-light dark:hover:bg-yellow-600 transition-colors font-medium">Get Started</a>
+                </div>
+                <div class="xl:hidden flex items-center space-x-2">
+                    <button id="mobile-menu-btn" class="p-2 text-gray-700 dark:text-gray-300" aria-label="Open navigation menu"><i id="mobile-menu-icon" data-lucide="menu" class="w-6 h-6"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden xl:hidden border-t border-gray-200 dark:border-gray-700">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-900">
+                <div>
+                    <button data-dropdown="mobile-home-dropdown" class="w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md flex items-center justify-between">Home<i data-lucide="chevron-down" class="w-4 h-4"></i></button>
+                    <div id="mobile-home-dropdown" class="dropdown-menu hidden pl-4"><a href="index.html" class="block px-3 py-2 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Home 1</a><a href="home2.html" class="block px-3 py-2 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Home 2</a></div>
+                </div>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">About</a>
+                <a href="services.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Services</a>
+                <a href="resources.html" aria-current="page" class="block px-3 py-2 text-navy dark:text-gold font-medium">Resources</a>
+                <a href="faq.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">FAQs</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Contact</a>
+                <div class="mobile-menu-settings" aria-label="Display settings">
+                    <button id="theme-toggle" type="button" aria-label="Toggle theme"><i id="theme-icon" data-lucide="sun" class="w-5 h-5"></i></button>
+                    <button id="dir-toggle" type="button" aria-label="Toggle direction"><i id="dir-icon" data-lucide="arrow-right-left" class="w-5 h-5"></i></button>
+                </div>
+                <a href="contact.html" class="mobile-menu-cta">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <header class="resources-hero relative isolate overflow-hidden bg-ivory dark:bg-gray-900 py-16 sm:py-20 lg:py-24">
+            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1800&h=900&fit=crop" alt="" aria-hidden="true" class="absolute inset-0 -z-20 h-full w-full object-cover" fetchpriority="high">
+            <div class="absolute inset-0 -z-10 bg-gradient-to-r from-ivory/95 via-white/90 to-ivory/65 dark:from-gray-900/95 dark:via-gray-900/85 dark:to-gray-900/65" aria-hidden="true"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl">
+                    <span class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-sage dark:text-gold mb-5"><i data-lucide="book-open-check" class="w-4 h-4"></i>Planning resources</span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight text-navy dark:text-gold mb-6">A practical place to start.</h1>
+                    <p class="text-lg sm:text-xl text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl mb-7">Use these prompts and checklists to organize your thoughts before a conversation about wills and estate planning.</p>
+                    <a href="#planning-checklist" class="inline-flex items-center gap-2 rounded-lg bg-navy dark:bg-gold px-5 py-3 font-medium text-white dark:text-navy hover:bg-navy-light dark:hover:bg-yellow-600 transition-colors">Open the checklist<i data-lucide="arrow-down" class="w-4 h-4"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <section class="py-14 sm:py-20 bg-white dark:bg-ivory-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-2xl mb-9">
+                    <span class="text-sm font-semibold uppercase tracking-wider text-sage dark:text-gold">A simple starting point</span>
+                    <h2 class="text-3xl sm:text-4xl font-semibold text-navy dark:text-gold mt-3 mb-3">Three things to think about</h2>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">A little preparation can make it easier to use your planning conversation well.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-5">
+                    <article class="resource-card"><span class="resource-card-icon"><i data-lucide="heart" class="w-6 h-6"></i></span><h3 class="text-xl font-semibold text-navy dark:text-gold mb-2">People</h3><p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Who matters to you? Who might take on a responsibility or need support?</p></article>
+                    <article class="resource-card"><span class="resource-card-icon"><i data-lucide="target" class="w-6 h-6"></i></span><h3 class="text-xl font-semibold text-navy dark:text-gold mb-2">Priorities</h3><p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">What would you like your plan to express, provide for, or make clearer?</p></article>
+                    <article class="resource-card"><span class="resource-card-icon"><i data-lucide="files" class="w-6 h-6"></i></span><h3 class="text-xl font-semibold text-navy dark:text-gold mb-2">Existing information</h3><p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Do you have current documents or records you may want to review?</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="resource-feature-section py-14 sm:py-20 bg-ivory dark:bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+                <figure class="resource-feature-image">
+                    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&h=900&fit=crop" alt="Notebook and pen ready for writing down estate planning questions" loading="lazy">
+                    <figcaption><i data-lucide="notebook-pen" class="w-5 h-5"></i><span>A few notes can make your first conversation feel more focused.</span></figcaption>
+                </figure>
+                <div class="max-w-xl">
+                    <span class="text-sm font-semibold uppercase tracking-wider text-sage dark:text-gold">Make it personal</span>
+                    <h2 class="text-3xl sm:text-4xl font-semibold text-navy dark:text-gold mt-3 mb-4">Bring the questions that matter to you.</h2>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-5">Your planning conversation can start with the people, responsibilities, and decisions you care about most. Jot down what you want to understand, even if you are not sure what the answer should be yet.</p>
+                    <a href="#planning-checklist" class="inline-flex items-center gap-2 font-semibold text-navy dark:text-gold hover:underline">Use the conversation checklist<i data-lucide="arrow-down" class="w-4 h-4"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="planning-checklist" class="py-14 sm:py-20 bg-gray-50 dark:bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-9">
+                    <div class="max-w-2xl">
+                        <span class="text-sm font-semibold uppercase tracking-wider text-sage dark:text-gold">Take it with you</span>
+                        <h2 class="text-3xl sm:text-4xl font-semibold text-navy dark:text-gold mt-3 mb-3">Planning conversation checklist</h2>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Use these prompts as a starting point. Skip anything that does not apply to your situation.</p>
+                    </div>
+                    <button type="button" id="print-checklist" class="print-control inline-flex shrink-0 items-center justify-center gap-2 rounded-lg border border-navy/30 dark:border-gold/40 px-5 py-3 font-medium text-navy dark:text-gold hover:bg-navy/5 dark:hover:bg-gold/10"><i data-lucide="printer" class="w-4 h-4"></i>Print checklist</button>
+                </div>
+                <div class="checklist-progress" aria-live="polite">
+                    <div class="flex items-center justify-between gap-4 mb-2"><span class="font-medium text-navy dark:text-gold">Your progress</span><span id="checklist-progress-label" class="text-sm text-gray-600 dark:text-gray-300">0 of 9 complete</span></div>
+                    <div class="checklist-progress-track" role="progressbar" aria-label="Checklist completion" aria-valuemin="0" aria-valuemax="9" aria-valuenow="0"><span id="checklist-progress-fill"></span></div>
+                </div>
+                <div class="grid lg:grid-cols-3 gap-5">
+                    <article class="resource-checklist-card">
+                        <h3 class="text-lg font-semibold text-navy dark:text-gold mb-4">My priorities</h3>
+                        <ul class="resource-checklist">
+                            <li><label><input type="checkbox">People or causes I want to consider</label></li>
+                            <li><label><input type="checkbox">Important responsibilities to plan for</label></li>
+                            <li><label><input type="checkbox">Questions about how I want decisions handled</label></li>
+                        </ul>
+                    </article>
+                    <article class="resource-checklist-card">
+                        <h3 class="text-lg font-semibold text-navy dark:text-gold mb-4">Information to gather</h3>
+                        <ul class="resource-checklist">
+                            <li><label><input type="checkbox">Copies of current wills, trusts, or related documents</label></li>
+                            <li><label><input type="checkbox">A general overview of property and accounts</label></li>
+                            <li><label><input type="checkbox">Existing beneficiary or decision-maker designations</label></li>
+                        </ul>
+                    </article>
+                    <article class="resource-checklist-card">
+                        <h3 class="text-lg font-semibold text-navy dark:text-gold mb-4">Questions to ask</h3>
+                        <ul class="resource-checklist">
+                            <li><label><input type="checkbox">Which local rules may apply to my situation?</label></li>
+                            <li><label><input type="checkbox">What options should I discuss with a qualified professional?</label></li>
+                            <li><label><input type="checkbox">When should I review these documents again?</label></li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-14 sm:py-20 bg-white dark:bg-ivory-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+                    <figure class="resource-feature-image resource-review-image">
+                        <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=1200&h=900&fit=crop" alt="Open calendar and notes ready for planning and review" loading="lazy">
+                        <figcaption><i data-lucide="calendar-check" class="w-5 h-5"></i><span>Life changes can be a good moment to revisit your plans.</span></figcaption>
+                    </figure>
+                    <div>
+                        <span class="text-sm font-semibold uppercase tracking-wider text-sage dark:text-gold">Keep your plan current</span>
+                        <h2 class="text-3xl sm:text-4xl font-semibold text-navy dark:text-gold mt-3 mb-4">When might it be time to review?</h2>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">A change in life circumstances can be a useful prompt to revisit your plans and ask whether anything needs attention.</p>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed mt-4">Even when life feels steady, you may want to check that your documents still reflect your wishes and that the people named to act on your behalf are still appropriate. Beneficiary designations and other account records may also need separate attention.</p>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed mt-4">There is no single review schedule that fits everyone. Make a note of questions as they come up, and ask a qualified professional about timing and any local requirements that apply to your circumstances.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-14 sm:py-20 bg-gray-50 dark:bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-2xl mb-9">
+                    <span class="text-sm font-semibold uppercase tracking-wider text-sage dark:text-gold">A helpful next step</span>
+                    <h2 class="text-3xl sm:text-4xl font-semibold text-navy dark:text-gold mt-3 mb-3">Turn a life change into a plan review.</h2>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">When something changes, take a moment to note what may need a second look. These simple steps can help you prepare for a conversation with a qualified professional.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-5">
+                    <article class="resource-card">
+                        <span class="resource-card-icon"><i data-lucide="notebook-pen" class="w-6 h-6"></i></span>
+                        <h3 class="text-xl font-semibold text-navy dark:text-gold mb-2">Write down what changed</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Note the life event and any new priorities, responsibilities, or questions it brings up.</p>
+                    </article>
+                    <article class="resource-card">
+                        <span class="resource-card-icon"><i data-lucide="files" class="w-6 h-6"></i></span>
+                        <h3 class="text-xl font-semibold text-navy dark:text-gold mb-2">Gather relevant documents</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Collect the current documents or records you may want to discuss, and keep them somewhere secure.</p>
+                    </article>
+                    <article class="resource-card">
+                        <span class="resource-card-icon"><i data-lucide="messages-square" class="w-6 h-6"></i></span>
+                        <h3 class="text-xl font-semibold text-navy dark:text-gold mb-2">Ask what should be reviewed</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">A qualified professional can help explain which updates may matter for your circumstances and local requirements.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="resource-cta-section py-14 sm:py-16">
+            <div class="resource-cta-card max-w-7xl mx-auto px-6 sm:px-10 py-9 sm:py-12">
+                <div><span class="text-sm font-semibold uppercase tracking-wider text-gold">Keep learning</span><h2 class="text-3xl sm:text-4xl font-semibold text-white mt-3 mb-4">Ready to explore your questions?</h2><p class="text-gray-200 leading-relaxed">Browse common questions or get in touch to arrange a general consultation enquiry.</p><p class="text-xs text-gray-300 mt-4">General information only; not legal advice. Requirements vary by jurisdiction.</p></div>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <a href="faq.html" class="inline-flex items-center justify-center gap-2 rounded-lg border border-white/60 px-5 py-3 text-white hover:bg-white hover:text-navy transition-colors">Browse FAQs</a>
+                    <a href="contact.html" class="inline-flex items-center justify-center gap-2 rounded-lg bg-gold px-5 py-3 font-medium text-navy hover:bg-yellow-600 transition-colors">Request a Consultation<i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer bg-gray-900 dark:bg-gray-950 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="footer-grid grid md:grid-cols-4 gap-8">
+                <div><a href="index.html" class="footer-brand inline-flex items-center gap-2 text-lg font-semibold mb-4" aria-label="LegacyWise home"><img src="assets/icons/legacywise-logo.svg" alt="" class="h-9 w-9"><span>LegacyWise</span></a><p class="text-sm">Protect Your Legacy. Plan with Confidence.</p><div class="footer-socials" aria-label="Follow LegacyWise"><a href="https://www.linkedin.com/company/legacywise/" target="_blank" rel="noopener noreferrer" aria-label="LegacyWise on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9v10M5 5v.01M9 19v-6a3 3 0 0 1 6 0v6M9 10v9" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a><a href="https://www.facebook.com/legacywise" target="_blank" rel="noopener noreferrer" aria-label="LegacyWise on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 21v-8h3l.5-4H15V7c0-1.2.4-2 2-2h1.7V1.4C18 1.2 17 1 15.5 1 12.3 1 10 3 10 6.7V9H7v4h3v8z" fill="currentColor"></path></svg></a><a href="https://www.instagram.com/legacywise/" target="_blank" rel="noopener noreferrer" aria-label="LegacyWise on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"></rect><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"></circle><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"></circle></svg></a></div><p class="footer-disclaimer text-xs mt-4">General information only; not legal advice. Legal requirements vary by jurisdiction.</p></div>
+                <div><h4 class="text-white font-medium mb-3">Quick Links</h4><ul class="space-y-2 text-sm"><li><a href="index.html" class="hover:text-gold">Home</a></li><li><a href="about.html" class="hover:text-gold">About</a></li><li><a href="resources.html" class="hover:text-gold">Resources</a></li><li><a href="services.html" class="hover:text-gold">Services</a></li><li><a href="faq.html" class="hover:text-gold">FAQs</a></li><li><a href="contact.html" class="hover:text-gold">Contact</a></li></ul></div>
+                <div><h4 class="text-white font-medium mb-3">Services</h4><ul class="space-y-2 text-sm"><li><a href="services.html#will-drafting" class="hover:text-gold">Will Drafting</a></li><li><a href="services.html#trust-planning" class="hover:text-gold">Trust Planning</a></li><li><a href="services.html#estate-planning" class="hover:text-gold">Estate Planning Guidance</a></li><li><a href="services.html#document-review" class="hover:text-gold">Estate Document Review</a></li></ul></div>
+                <div><h4 class="text-white font-medium mb-3">Information</h4><p class="text-sm mb-2">Office Hours: Mon-Fri 9:00-17:00</p><p class="text-sm mb-2">Email: info@legacywise.example</p><p class="text-sm">Phone: (555) 123-4567</p></div>
+            </div>
+            <section class="footer-newsletter" aria-labelledby="footer-newsletter-heading"><div><h4 id="footer-newsletter-heading">A little planning wisdom, now and then</h4><p>Get thoughtful prompts and practical estate-planning resources in your inbox.</p></div><div><form class="footer-newsletter-form"><label class="sr-only" for="footer-newsletter-email">Email address</label><input id="footer-newsletter-email" name="email" type="email" autocomplete="email" placeholder="Your email address" required><button type="submit">Join the newsletter</button></form><p class="footer-newsletter-status" aria-live="polite"></p><p class="text-xs">Demo signup only; no email is sent or stored.</p></div></section>
+            <div class="footer-bottom border-t border-gray-800 mt-8 pt-6 text-center text-sm"><p>&copy; 2026 LegacyWise. All rights reserved.</p></div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/resources.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

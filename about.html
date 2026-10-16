@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/init.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link href="assets/typography.css" rel="stylesheet">
+    <link href="assets/navigation.css" rel="stylesheet">
+    <link href="assets/footer.css" rel="stylesheet">
+    <link href="assets/cta-variants.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/legacywise-logo.svg">
+    <title>About LegacyWise | Thoughtful Will & Estate Planning</title>
+    <meta name="description" content="Learn about LegacyWise and our thoughtful, clear, and respectful approach to will and estate planning guidance.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode:'class', theme:{ extend:{ colors:{ ivory:'#f8f6f0','ivory-dark':'#1a1814',navy:'#1a365d','navy-light':'#2d4a6b',sage:'#4a5d4a',gold:'#b8944a' }}}}
+    </script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="bg-white dark:bg-ivory-dark text-gray-900 dark:text-gray-100 transition-colors duration-200">
+    <div id="notification-container" class="fixed top-4 right-4 z-50 space-y-2"></div>
+    <nav class="site-nav bg-white dark:bg-gray-900 shadow-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="inline-flex items-center gap-2 text-xl font-semibold text-navy dark:text-gold" aria-label="LegacyWise home"><img src="assets/icons/legacywise-logo.svg" alt="" class="h-9 w-9"><span>LegacyWise</span></a>
+                <div class="hidden xl:flex items-center space-x-6">
+                    <div class="relative">
+                        <button data-dropdown="home-dropdown" class="flex items-center text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors">Home<i data-lucide="chevron-down" class="ml-1 w-4 h-4"></i></button>
+                        <div id="home-dropdown" class="dropdown-menu hidden absolute left-0 mt-2 w-48 bg-white dark:bg-gray-900 rounded-md shadow-lg border border-gray-200 dark:border-gray-700 py-1">
+                            <a href="index.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">Home 1</a>
+                            <a href="home2.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">Home 2</a>
+                        </div>
+                    </div>
+                    <a href="about.html" aria-current="page" class="text-navy dark:text-gold font-medium">About</a>
+                    <a href="services.html" class="text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors">Services</a>
+                    <a href="resources.html" class="text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors">Resources</a>
+                    <a href="faq.html" class="text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors">FAQs</a>
+                    <a href="contact.html" class="text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors">Contact</a>
+                    <button id="theme-toggle" class="p-2 text-gray-700 dark:text-gray-300" aria-label="Toggle theme"><i id="theme-icon" data-lucide="sun" class="w-5 h-5"></i></button>
+                    <button id="dir-toggle" class="p-2 text-gray-700 dark:text-gray-300" aria-label="Toggle direction"><i id="dir-icon" data-lucide="arrow-right-left" class="w-5 h-5"></i></button>
+                    <a href="contact.html" class="bg-navy dark:bg-gold text-white dark:text-navy px-4 py-2 rounded-md hover:bg-navy-light dark:hover:bg-yellow-600 transition-colors font-medium">Get Started</a>
+                </div>
+                <div class="xl:hidden flex items-center space-x-2">
+                    <button id="mobile-menu-btn" class="p-2 text-gray-700 dark:text-gray-300" aria-label="Open navigation menu"><i id="mobile-menu-icon" data-lucide="menu" class="w-6 h-6"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden xl:hidden border-t border-gray-200 dark:border-gray-700">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-900">
+                <div>
+                    <button data-dropdown="mobile-home-dropdown" class="w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md flex items-center justify-between">Home<i data-lucide="chevron-down" class="w-4 h-4"></i></button>
+                    <div id="mobile-home-dropdown" class="dropdown-menu hidden pl-4"><a href="index.html" class="block px-3 py-2 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Home 1</a><a href="home2.html" class="block px-3 py-2 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Home 2</a></div>
+                </div>
+                <a href="about.html" aria-current="page" class="block px-3 py-2 text-navy dark:text-gold font-medium">About</a>
+                <a href="services.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Services</a>
+                <a href="resources.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Resources</a>
+                <a href="faq.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">FAQs</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Contact</a>
+                <div class="mobile-menu-settings" aria-label="Display settings">
+                    <button id="theme-toggle" type="button" aria-label="Toggle theme"><i id="theme-icon" data-lucide="sun" class="w-5 h-5"></i></button>
+                    <button id="dir-toggle" type="button" aria-label="Toggle direction"><i id="dir-icon" data-lucide="arrow-right-left" class="w-5 h-5"></i></button>
+                </div>
+                <a href="contact.html" class="mobile-menu-cta">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <header class="relative isolate overflow-hidden bg-ivory dark:bg-gray-900 py-16 sm:py-20 lg:py-24">
+            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1800&h=900&fit=crop" alt="Modern professional office interior" class="absolute inset-0 -z-20 h-full w-full object-cover" fetchpriority="high">
+            <div class="absolute inset-0 -z-10 bg-gradient-to-r from-ivory/95 via-white/90 to-ivory/65 dark:from-gray-900/95 dark:via-gray-900/85 dark:to-gray-900/65" aria-hidden="true"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl">
+                    <span class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-sage dark:text-gold mb-5"><i data-lucide="landmark" class="w-4 h-4"></i>About LegacyWise</span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight text-navy dark:text-gold mb-6">Planning with people, purpose, and peace of mind.</h1>
+                    <p class="text-lg sm:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">We believe planning for the future should feel clear, considered, and centered on the people and priorities that matter to you.</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="py-16 sm:py-20 bg-white dark:bg-ivory-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-[0.8fr_1.2fr] gap-12 items-start">
+                <div class="rounded-2xl bg-navy dark:bg-gray-900 p-8 sm:p-10 text-white">
+                    <i data-lucide="book-open-check" class="w-9 h-9 text-gold mb-6"></i>
+                    <p class="text-sm font-semibold uppercase tracking-wider text-gold mb-3">Our story</p>
+                    <h2 class="text-3xl font-semibold mb-4">A clearer way to think about what comes next.</h2>
+                    <p class="text-gray-200 leading-relaxed">LegacyWise is built around a simple belief: people should be able to approach future planning with clear information, thoughtful questions, and time to consider what matters to them.</p>
+                </div>
+                <div class="pt-2">
+                    <h2 class="text-3xl sm:text-4xl font-semibold text-navy dark:text-gold mb-5">A personal process, handled with care</h2>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-5">Wills and estate planning involve personal decisions about family, property, and future responsibilities. Our educational, respectful approach helps make common considerations easier to understand and helps you prepare questions for professionals who can advise on your circumstances.</p>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">There is no single plan that suits everyone. Your priorities, assets, family circumstances, and local requirements all matter.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 sm:py-20 bg-gray-50 dark:bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-2xl mx-auto text-center mb-12">
+                    <span class="text-sm font-semibold uppercase tracking-wider text-sage dark:text-gold">Our direction</span>
+                    <h2 class="text-3xl sm:text-4xl font-semibold text-navy dark:text-gold mt-3">Vision & mission</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+                    <article class="rounded-2xl border border-gold/30 bg-white dark:bg-ivory-dark p-8 sm:p-10 shadow-sm">
+                        <span class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gold/15 text-navy dark:text-gold mb-5"><i data-lucide="telescope" class="w-6 h-6"></i></span>
+                        <p class="text-sm font-semibold uppercase tracking-wider text-sage dark:text-gold mb-3">Our vision</p>
+                        <h3 class="text-2xl font-semibold text-navy dark:text-gold mb-4">A future where people feel informed and prepared to make their wishes known.</h3>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">We want planning ahead to feel more approachable, so individuals and families can consider their choices with greater confidence.</p>
+                    </article>
+                    <article class="rounded-2xl border border-gold/30 bg-white dark:bg-ivory-dark p-8 sm:p-10 shadow-sm">
+                        <span class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gold/15 text-navy dark:text-gold mb-5"><i data-lucide="compass" class="w-6 h-6"></i></span>
+                        <p class="text-sm font-semibold uppercase tracking-wider text-sage dark:text-gold mb-3">Our mission</p>
+                        <h3 class="text-2xl font-semibold text-navy dark:text-gold mb-4">Make estate planning easier to understand and begin.</h3>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">We provide clear, respectful information that helps people organize their questions, understand common considerations, and find appropriate professional guidance.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 sm:py-20 bg-gray-50 dark:bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-2xl mx-auto text-center mb-12">
+                    <span class="text-sm font-semibold uppercase tracking-wider text-sage dark:text-gold">What guides us</span>
+                    <h2 class="text-3xl sm:text-4xl font-semibold text-navy dark:text-gold mt-3 mb-4">A thoughtful way to plan</h2>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">We aim to make every conversation clear, considerate, and focused on your needs.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <article class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-ivory-dark p-7 shadow-sm">
+                        <span class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gold/15 text-navy dark:text-gold mb-5"><i data-lucide="messages-square" class="w-6 h-6"></i></span>
+                        <h3 class="text-xl font-semibold text-navy dark:text-gold mb-3">Clarity over jargon</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">We explain general planning concepts in accessible language so you can explore your questions with more confidence.</p>
+                    </article>
+                    <article class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-ivory-dark p-7 shadow-sm">
+                        <span class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gold/15 text-navy dark:text-gold mb-5"><i data-lucide="hand-heart" class="w-6 h-6"></i></span>
+                        <h3 class="text-xl font-semibold text-navy dark:text-gold mb-3">Respect for every story</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">We recognize that family structures, priorities, and personal circumstances differ, and approach each with care.</p>
+                    </article>
+                    <article class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-ivory-dark p-7 shadow-sm">
+                        <span class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gold/15 text-navy dark:text-gold mb-5"><i data-lucide="shield-check" class="w-6 h-6"></i></span>
+                        <h3 class="text-xl font-semibold text-navy dark:text-gold mb-3">Careful consideration</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">We encourage thoughtful decisions, organized information, and appropriate professional advice when needed.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 sm:py-20 bg-white dark:bg-ivory-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-2xl mx-auto text-center mb-12">
+                    <span class="text-sm font-semibold uppercase tracking-wider text-sage dark:text-gold">People working together</span>
+                    <h2 class="text-3xl sm:text-4xl font-semibold text-navy dark:text-gold mt-3 mb-4">Our team approach</h2>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Good planning is collaborative. Your goals lead the way, supported by clear information and the right professional expertise for your situation.</p>
+                    <p class="text-xs text-gray-500 dark:text-gray-500 mt-3">The photos below are representative imagery, not portraits of named LegacyWise staff.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <article class="overflow-hidden rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=560&fit=crop&crop=faces" alt="Representative portrait of a professional woman" class="w-full h-56 object-cover" loading="lazy">
+                        <div class="p-7"><i data-lucide="messages-square" class="w-7 h-7 text-gold mb-4"></i>
+                        <h3 class="text-xl font-semibold text-navy dark:text-gold mb-3">Client guidance</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Clear conversations help bring your priorities, questions, and choices to the center of planning.</p></div>
+                    </article>
+                    <article class="overflow-hidden rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&h=560&fit=crop&crop=faces" alt="Representative portrait of a professional man" class="w-full h-56 object-cover" loading="lazy">
+                        <div class="p-7"><i data-lucide="book-open-check" class="w-7 h-7 text-gold mb-4"></i>
+                        <h3 class="text-xl font-semibold text-navy dark:text-gold mb-3">Planning education</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Accessible information can help you understand general topics and organize questions for further advice.</p></div>
+                    </article>
+                    <article class="overflow-hidden rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=900&h=560&fit=crop" alt="Representative image of colleagues working together around a table" class="w-full h-56 object-cover" loading="lazy">
+                        <div class="p-7"><i data-lucide="scale" class="w-7 h-7 text-gold mb-4"></i>
+                        <h3 class="text-xl font-semibold text-navy dark:text-gold mb-3">Qualified professionals</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">For tailored legal advice and documents, work with appropriately qualified professionals in your jurisdiction.</p></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 sm:py-20 bg-white dark:bg-ivory-dark">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-[0.7fr_1.3fr] gap-12 items-start">
+                    <div>
+                        <span class="text-sm font-semibold uppercase tracking-wider text-sage dark:text-gold">How we help</span>
+                        <h2 class="text-3xl sm:text-4xl font-semibold text-navy dark:text-gold mt-3">A clear path through important decisions</h2>
+                    </div>
+                    <ol class="space-y-4">
+                        <li class="flex gap-5 rounded-xl border border-gray-200 dark:border-gray-700 p-5"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-navy dark:bg-gold text-white dark:text-navy font-semibold">1</span><div><h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-1">Understand what matters to you</h3><p class="text-sm text-gray-600 dark:text-gray-400">Start with your goals, questions, and the people you want your plans to consider.</p></div></li>
+                        <li class="flex gap-5 rounded-xl border border-gray-200 dark:border-gray-700 p-5"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-navy dark:bg-gold text-white dark:text-navy font-semibold">2</span><div><h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-1">Explore general options</h3><p class="text-sm text-gray-600 dark:text-gray-400">Review common planning topics and identify areas where you may need tailored advice.</p></div></li>
+                        <li class="flex gap-5 rounded-xl border border-gray-200 dark:border-gray-700 p-5"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-navy dark:bg-gold text-white dark:text-navy font-semibold">3</span><div><h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-1">Connect with the right expertise</h3><p class="text-sm text-gray-600 dark:text-gray-400">Work with appropriately qualified professionals for advice and documents suited to your circumstances.</p></div></li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-cta-section py-14 sm:py-16">
+            <div class="about-cta-card max-w-7xl mx-auto px-6 sm:px-10 py-9 sm:py-12">
+                <div><span class="text-sm font-semibold uppercase tracking-wider text-sage dark:text-gold">A thoughtful beginning</span><h2 class="text-3xl sm:text-4xl font-semibold text-navy dark:text-gold mt-3 mb-3">Let’s start with what matters to you.</h2><p class="text-gray-600 dark:text-gray-300 leading-relaxed">Bring your questions and priorities. We’ll help you find a clear place to begin.</p><p class="text-xs text-gray-500 dark:text-gray-400 mt-4">General information only; not legal advice. Requirements vary by jurisdiction.</p></div>
+                <a href="contact.html" class="inline-flex items-center gap-2 rounded-lg bg-navy dark:bg-gold px-6 py-3 font-semibold text-white dark:text-navy hover:bg-navy-light dark:hover:bg-yellow-600 transition-colors">Request a Consultation<i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer bg-gray-900 dark:bg-gray-950 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="footer-grid grid md:grid-cols-4 gap-8">
+                <div><a href="index.html" class="footer-brand inline-flex items-center gap-2 text-lg font-semibold mb-4" aria-label="LegacyWise home"><img src="assets/icons/legacywise-logo.svg" alt="" class="h-9 w-9"><span>LegacyWise</span></a><p class="text-sm">Protect Your Legacy. Plan with Confidence.</p><div class="footer-socials" aria-label="Follow LegacyWise"><a href="https://www.linkedin.com/company/legacywise/" target="_blank" rel="noopener noreferrer" aria-label="LegacyWise on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9v10M5 5v.01M9 19v-6a3 3 0 0 1 6 0v6M9 10v9" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a><a href="https://www.facebook.com/legacywise" target="_blank" rel="noopener noreferrer" aria-label="LegacyWise on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 21v-8h3l.5-4H15V7c0-1.2.4-2 2-2h1.7V1.4C18 1.2 17 1 15.5 1 12.3 1 10 3 10 6.7V9H7v4h3v8z" fill="currentColor"></path></svg></a><a href="https://www.instagram.com/legacywise/" target="_blank" rel="noopener noreferrer" aria-label="LegacyWise on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"></rect><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"></circle><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"></circle></svg></a></div><p class="footer-disclaimer text-xs mt-4">General information only - not legal advice. Legal requirements vary by jurisdiction.</p></div>
+                <div><h4 class="text-white font-medium mb-3">Quick Links</h4><ul class="space-y-2 text-sm"><li><a href="index.html" class="hover:text-gold">Home</a></li><li><a href="about.html" class="hover:text-gold">About</a></li><li><a href="resources.html" class="hover:text-gold">Resources</a></li><li><a href="services.html" class="hover:text-gold">Services</a></li><li><a href="faq.html" class="hover:text-gold">FAQs</a></li><li><a href="contact.html" class="hover:text-gold">Contact</a></li></ul></div>
+                <div><h4 class="text-white font-medium mb-3">Services</h4><ul class="space-y-2 text-sm"><li><a href="services.html#will-drafting" class="hover:text-gold">Will Drafting</a></li><li><a href="services.html#trust-planning" class="hover:text-gold">Trust Planning</a></li><li><a href="services.html#estate-planning" class="hover:text-gold">Estate Planning Guidance</a></li><li><a href="services.html#document-review" class="hover:text-gold">Estate Document Review</a></li></ul></div>
+                <div><h4 class="text-white font-medium mb-3">Information</h4><p class="text-sm mb-2">Office Hours: Mon-Fri 9:00-17:00</p><p class="text-sm mb-2">Email: info@legacywise.example</p><p class="text-sm">Phone: (555) 123-4567</p></div>
+            </div>
+            <section class="footer-newsletter" aria-labelledby="footer-newsletter-heading"><div><h4 id="footer-newsletter-heading">A little planning wisdom, now and then</h4><p>Get thoughtful prompts and practical estate-planning resources in your inbox.</p></div><div><form class="footer-newsletter-form"><label class="sr-only" for="footer-newsletter-email">Email address</label><input id="footer-newsletter-email" name="email" type="email" autocomplete="email" placeholder="Your email address" required><button type="submit">Join the newsletter</button></form><p class="footer-newsletter-status" aria-live="polite"></p><p class="text-xs">Demo signup only; no email is sent or stored.</p></div></section>
+            <div class="footer-bottom border-t border-gray-800 mt-8 pt-6 text-center text-sm"><p>&copy; 2026 LegacyWise. All rights reserved.</p></div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/footer.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

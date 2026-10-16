@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/init.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link href="assets/typography.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/legacywise-logo.svg">
+    <title>Page Not Found - LegacyWise Will & Estate Planning</title>
+    <meta name="description" content="Page not found - LegacyWise">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        ivory: '#f8f6f0',
+                        'ivory-dark': '#1a1814',
+                        navy: '#1a365d',
+                        'navy-light': '#2d4a6b',
+                        sage: '#4a5d4a',
+                        gold: '#b8944a'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="bg-white dark:bg-ivory-dark text-gray-900 dark:text-gray-100 transition-colors duration-200">
+    <!-- Notification Container -->
+    <div id="notification-container" class="fixed top-4 right-4 z-50 space-y-2"></div>
+    
+    <!-- 404 Content -->
+    <main class="min-h-[60vh] flex items-center justify-center px-4 py-12">
+        <div class="text-center max-w-2xl">
+            <div class="mb-8">
+                <i data-lucide="search-x" class="w-24 h-24 mx-auto text-gray-400 dark:text-gray-600 mb-4"></i>
+                <h1 class="text-6xl font-bold text-navy dark:text-gold mb-4">404</h1>
+                <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4">Page Not Found</h2>
+                <p class="text-gray-600 dark:text-gray-400 mb-8">The page you're looking for doesn't exist or has been moved.</p>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html" class="inline-flex items-center justify-center px-6 py-3 bg-navy dark:bg-gold text-white dark:text-navy rounded-md hover:bg-navy-light dark:hover:bg-yellow-600 transition-colors font-medium">
+                    <i data-lucide="home" class="w-5 h-5 mr-2"></i>
+                    Back to Home
+                </a>
+                <a href="contact.html" class="inline-flex items-center justify-center px-6 py-3 border border-navy dark:border-gold text-navy dark:text-gold rounded-md hover:bg-navy dark:hover:bg-gold hover:text-white dark:hover:text-navy transition-colors font-medium">
+                    <i data-lucide="message-square" class="w-5 h-5 mr-2"></i>
+                    Request a Consultation
+                </a>
+            </div>
+        </div>
+    </main>
+    
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
