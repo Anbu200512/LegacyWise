@@ -4,8 +4,7 @@
     var THEME_KEY = 'legacywise_theme';
     var DIR_KEY = 'legacywise_direction';
     var saved = localStorage.getItem(THEME_KEY);
-    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    var isDark = saved ? saved === 'dark' : prefersDark;
+    var isDark = saved === 'dark';
     if (isDark) {
       document.documentElement.classList.add('dark');
     } else {

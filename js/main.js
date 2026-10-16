@@ -65,13 +65,7 @@ function toggleTheme() {
 
 function initTheme() {
   const saved = readSetting(THEME_KEY);
-  let prefersDark = false;
-  try {
-    prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  } catch (error) {
-    // Default to light mode when the media query API is unavailable.
-  }
-  applyTheme(saved ? saved === 'dark' : prefersDark);
+  applyTheme(saved === 'dark');
 }
 
 function initThemeToggle() {
