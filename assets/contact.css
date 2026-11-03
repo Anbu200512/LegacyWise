@@ -33,7 +33,7 @@
 }
 
 .contact-page #contact-form label {
-  color: #26384e;
+  color: #1a365d;
   font-weight: 600;
 }
 
@@ -58,11 +58,6 @@
 .contact-page #contact-form textarea:focus {
   border-color: #b8944a;
   box-shadow: 0 0 0 3px rgb(184 148 74 / 0.18);
-}
-
-.contact-page #contact-form button[type="submit"] {
-  border-radius: 0.7rem;
-  box-shadow: 0 7px 17px rgb(26 54 93 / 0.15);
 }
 
 .contact-page .contact-sidebar-card {

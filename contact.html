@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
     <link href="assets/typography.css" rel="stylesheet">
+    <link href="assets/buttons.css" rel="stylesheet">
     <link href="assets/navigation.css" rel="stylesheet">
     <link href="assets/footer.css" rel="stylesheet">
     <link href="assets/cta-variants.css" rel="stylesheet">
@@ -42,7 +43,7 @@
                     <a href="contact.html" aria-current="page" class="text-navy dark:text-gold font-medium">Contact</a>
                     <button id="theme-toggle" class="p-2 text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors"><i id="theme-icon" data-lucide="sun" class="w-5 h-5"></i></button>
                     <button id="dir-toggle" class="p-2 text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors"><i id="dir-icon" data-lucide="arrow-right-left" class="w-5 h-5"></i></button>
-                    <a href="contact.html" class="bg-navy dark:bg-gold text-white dark:text-navy px-4 py-2 rounded-md hover:bg-navy-light dark:hover:bg-yellow-600 transition-colors font-medium">Get Started</a>
+                    <a href="contact.html" class="btn btn-primary">Get Started</a>
                 </div>
                 <div class="xl:hidden flex items-center space-x-2">
                     <button id="mobile-menu-btn" class="p-2 text-gray-700 dark:text-gray-300"><i id="mobile-menu-icon" data-lucide="menu" class="w-6 h-6"></i></button>
@@ -60,12 +61,12 @@
                 <a href="services.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Services</a>
                 <a href="resources.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Resources</a>
                 <a href="faq.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">FAQs</a>
-                <a href="contact.html" aria-current="page" class="block px-3 py-2 text-navy dark:text-gold font-medium rounded-md">Contact</a>
+                <a href="contact.html" aria-current="page" class="block px-3 py-2 text-navy dark:text-gold font-medium">Contact</a>
                 <div class="mobile-menu-settings" aria-label="Display settings">
                     <button id="theme-toggle" type="button" aria-label="Toggle theme"><i id="theme-icon" data-lucide="sun" class="w-5 h-5"></i></button>
                     <button id="dir-toggle" type="button" aria-label="Toggle direction"><i id="dir-icon" data-lucide="arrow-right-left" class="w-5 h-5"></i></button>
                 </div>
-                <a href="contact.html" class="mobile-menu-cta">Get Started</a>
+                <a href="contact.html" class="mobile-menu-cta btn btn-primary">Get Started</a>
             </div>
         </div>
     </nav>
@@ -75,7 +76,7 @@
             <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1800&h=900&fit=crop" alt="" aria-hidden="true" class="absolute inset-0 -z-20 h-full w-full object-cover" fetchpriority="high">
             <div class="absolute inset-0 -z-10 bg-gradient-to-r from-ivory/95 via-white/90 to-ivory/65 dark:from-gray-900/95 dark:via-gray-900/85 dark:to-gray-900/65" aria-hidden="true"></div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="max-w-3xl">
+                <div class="max-w-3xl mx-auto text-center">
                     <span class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-sage dark:text-gold mb-5"><i data-lucide="messages-square" class="w-4 h-4"></i>Start a conversation</span>
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight text-navy dark:text-gold mb-6">Contact & consultation enquiry</h1>
                     <p class="text-lg sm:text-xl text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl">Share your general questions or request a conversation. This demonstration form is not a secure legal intake system; please do not include sensitive financial or legal details.</p>
@@ -83,7 +84,7 @@
             </div>
         </header>
         
-        <section class="contact-section py-12 sm:py-16 bg-white dark:bg-ivory-dark">
+        <section class="contact-section py-16 sm:py-20 bg-white dark:bg-ivory-dark">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="mb-8 max-w-2xl">
                     <span class="text-sm font-semibold uppercase tracking-wider text-sage dark:text-gold">Your next step</span>
@@ -165,7 +166,7 @@
                             </div>
                             <p id="error-consent" class="field-error text-xs text-red-600 dark:text-red-400"></p>
                             <div class="pt-4">
-                                <button type="submit" class="w-full md:w-auto px-6 py-3 bg-navy dark:bg-gold text-white dark:text-navy rounded-md hover:bg-navy-light dark:hover:bg-yellow-600 transition-colors font-medium">Submit Enquiry</button>
+                                <button type="submit" class="w-full md:w-auto btn btn-primary">Submit Enquiry</button>
                             </div>
                             <p class="text-xs text-gray-600 dark:text-gray-400">Do not send sensitive financial information. This form is a demonstration only.</p>
                         </form>
@@ -229,7 +230,7 @@
                 <div><h4 class="text-white font-medium mb-3">Services</h4><ul class="space-y-2 text-sm"><li><a href="services.html#will-drafting" class="hover:text-gold">Will Drafting</a></li><li><a href="services.html#trust-planning" class="hover:text-gold">Trust Planning</a></li><li><a href="services.html#estate-planning" class="hover:text-gold">Estate Planning Guidance</a></li><li><a href="services.html#document-review" class="hover:text-gold">Estate Document Review</a></li></ul></div>
                 <div><h4 class="text-white font-medium mb-3">Information</h4><p class="text-sm mb-2">Office Hours: Mon-Fri 9:00-17:00</p><p class="text-sm mb-2">Email: info@legacywise.example</p><p class="text-sm">Phone: (555) 123-4567</p></div>
             </div>
-            <section class="footer-newsletter" aria-labelledby="footer-newsletter-heading"><div><h4 id="footer-newsletter-heading">A little planning wisdom, now and then</h4><p>Get thoughtful prompts and practical estate-planning resources in your inbox.</p></div><div><form class="footer-newsletter-form"><label class="sr-only" for="footer-newsletter-email">Email address</label><input id="footer-newsletter-email" name="email" type="email" autocomplete="email" placeholder="Your email address" required><button type="submit">Join the newsletter</button></form><p class="footer-newsletter-status" aria-live="polite"></p><p class="text-xs">Demo signup only; no email is sent or stored.</p></div></section>
+            <section class="footer-newsletter" aria-labelledby="footer-newsletter-heading"><div><h4 id="footer-newsletter-heading">A little planning wisdom, now and then</h4><p>Get thoughtful prompts and practical estate-planning resources in your inbox.</p></div><div><form class="footer-newsletter-form"><label class="sr-only" for="footer-newsletter-email">Email address</label><input id="footer-newsletter-email" name="email" type="email" autocomplete="email" placeholder="Your email address" required><button type="submit" class="btn btn-primary">Join the newsletter</button></form><p class="footer-newsletter-status" aria-live="polite"></p><p class="text-xs">Demo signup only; no email is sent or stored.</p></div></section>
             <div class="footer-bottom border-t border-gray-800 mt-8 pt-6 text-center text-sm"><p>&copy; 2026 LegacyWise. All rights reserved.</p></div>
         </div>
     </footer>

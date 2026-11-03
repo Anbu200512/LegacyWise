@@ -98,8 +98,6 @@
 
 .service-page .service-copy-panel a[href="contact.html"] {
   margin-top: 0.25rem;
-  border-radius: 0.65rem;
-  box-shadow: 0 6px 16px rgb(26 54 93 / 0.14);
 }
 
 .service-page .service-approach {
@@ -304,7 +302,6 @@
 
 .service-page .service-copy-panel a[href="contact.html"] {
   margin-top: 0.5rem;
-  padding: 0.8rem 1.2rem;
 }
 
 .service-page .service-jump {

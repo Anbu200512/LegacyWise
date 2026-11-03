@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
     <link href="assets/typography.css" rel="stylesheet">
+    <link href="assets/buttons.css" rel="stylesheet">
     <link href="assets/navigation.css" rel="stylesheet">
     <link href="assets/footer.css" rel="stylesheet">
     <link href="assets/cta-variants.css" rel="stylesheet">
@@ -38,11 +39,11 @@
                     <a href="about.html" class="text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors">About</a>
                     <a href="services.html" class="text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors">Services</a>
                     <a href="resources.html" class="text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors">Resources</a>
-                    <a href="faq.html" class="text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors">FAQs</a>
+                    <a href="faq.html" aria-current="page" class="text-navy dark:text-gold font-medium">FAQs</a>
                     <a href="contact.html" class="text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors">Contact</a>
                     <button id="theme-toggle" class="p-2 text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors"><i id="theme-icon" data-lucide="sun" class="w-5 h-5"></i></button>
                     <button id="dir-toggle" class="p-2 text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors"><i id="dir-icon" data-lucide="arrow-right-left" class="w-5 h-5"></i></button>
-                    <a href="contact.html" class="bg-navy dark:bg-gold text-white dark:text-navy px-4 py-2 rounded-md hover:bg-navy-light dark:hover:bg-yellow-600 transition-colors font-medium">Get Started</a>
+                    <a href="contact.html" class="btn btn-primary">Get Started</a>
                 </div>
                 <div class="xl:hidden flex items-center space-x-2">
                     <button id="mobile-menu-btn" class="p-2 text-gray-700 dark:text-gray-300"><i id="mobile-menu-icon" data-lucide="menu" class="w-6 h-6"></i></button>
@@ -59,13 +60,13 @@
                 <a href="about.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">About</a>
                 <a href="services.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Services</a>
                 <a href="resources.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Resources</a>
-                <a href="faq.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">FAQs</a>
+                <a href="faq.html" aria-current="page" class="block px-3 py-2 text-navy dark:text-gold font-medium">FAQs</a>
                 <a href="contact.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Contact</a>
                 <div class="mobile-menu-settings" aria-label="Display settings">
                     <button id="theme-toggle" type="button" aria-label="Toggle theme"><i id="theme-icon" data-lucide="sun" class="w-5 h-5"></i></button>
                     <button id="dir-toggle" type="button" aria-label="Toggle direction"><i id="dir-icon" data-lucide="arrow-right-left" class="w-5 h-5"></i></button>
                 </div>
-                <a href="contact.html" class="mobile-menu-cta">Get Started</a>
+                <a href="contact.html" class="mobile-menu-cta btn btn-primary">Get Started</a>
             </div>
         </div>
     </nav>
@@ -89,7 +90,7 @@
             </div>
         </section>
         
-        <section class="py-12 sm:py-16 bg-white dark:bg-ivory-dark">
+        <section class="py-16 sm:py-20 bg-white dark:bg-ivory-dark">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-wrap justify-center gap-2 mb-8" role="group" aria-label="Filter questions by topic">
                     <button type="button" class="faq-category-filter" data-category="all" aria-pressed="true">All questions</button>
@@ -195,7 +196,8 @@
             </div>
             <div class="faq-contact-card max-w-4xl mx-auto mt-10 p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
                 <div><h2 class="text-xl sm:text-2xl font-semibold text-navy dark:text-gold mb-2">Still have a question?</h2><p class="text-sm text-gray-600 dark:text-gray-400">We’re happy to help you find the right place to start.</p></div>
-                <a href="contact.html" class="inline-flex shrink-0 items-center gap-2 rounded-lg bg-navy dark:bg-gold px-5 py-3 font-medium text-white dark:text-navy hover:bg-navy-light dark:hover:bg-yellow-600 transition-colors">Request a Consultation<i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                <a href="contact.html" class="btn btn-primary shrink-0">Request a Consultation<i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+            </div>
             </div>
         </section>
     </main>
@@ -208,7 +210,7 @@
                 <div><h4 class="text-white font-medium mb-3">Services</h4><ul class="space-y-2 text-sm"><li><a href="services.html#will-drafting" class="hover:text-gold">Will Drafting</a></li><li><a href="services.html#trust-planning" class="hover:text-gold">Trust Planning</a></li><li><a href="services.html#estate-planning" class="hover:text-gold">Estate Planning Guidance</a></li><li><a href="services.html#document-review" class="hover:text-gold">Estate Document Review</a></li></ul></div>
                 <div><h4 class="text-white font-medium mb-3">Information</h4><p class="text-sm mb-2">Office Hours: Mon-Fri 9:00-17:00</p><p class="text-sm mb-2">Email: info@legacywise.example</p><p class="text-sm">Phone: (555) 123-4567</p></div>
             </div>
-            <section class="footer-newsletter" aria-labelledby="footer-newsletter-heading"><div><h4 id="footer-newsletter-heading">A little planning wisdom, now and then</h4><p>Get thoughtful prompts and practical estate-planning resources in your inbox.</p></div><div><form class="footer-newsletter-form"><label class="sr-only" for="footer-newsletter-email">Email address</label><input id="footer-newsletter-email" name="email" type="email" autocomplete="email" placeholder="Your email address" required><button type="submit">Join the newsletter</button></form><p class="footer-newsletter-status" aria-live="polite"></p><p class="text-xs">Demo signup only; no email is sent or stored.</p></div></section>
+            <section class="footer-newsletter" aria-labelledby="footer-newsletter-heading"><div><h4 id="footer-newsletter-heading">A little planning wisdom, now and then</h4><p>Get thoughtful prompts and practical estate-planning resources in your inbox.</p></div><div><form class="footer-newsletter-form"><label class="sr-only" for="footer-newsletter-email">Email address</label><input id="footer-newsletter-email" name="email" type="email" autocomplete="email" placeholder="Your email address" required><button type="submit" class="btn btn-primary">Join the newsletter</button></form><p class="footer-newsletter-status" aria-live="polite"></p><p class="text-xs">Demo signup only; no email is sent or stored.</p></div></section>
             <div class="footer-bottom border-t border-gray-800 mt-8 pt-6 text-center text-sm"><p>&copy; 2026 LegacyWise. All rights reserved.</p></div>
         </div>
     </footer>

@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
     <link href="assets/typography.css" rel="stylesheet">
+    <link href="assets/buttons.css" rel="stylesheet">
     <link href="assets/navigation.css" rel="stylesheet">
     <link href="assets/footer.css" rel="stylesheet">
     <link href="assets/cta-variants.css" rel="stylesheet">
@@ -55,13 +56,13 @@
                 </div>
                 <div class="hidden xl:flex items-center space-x-6">
                     <div class="relative">
-                        <button data-dropdown="home-dropdown" class="flex items-center text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors">
+                        <button data-dropdown="home-dropdown" aria-current="page" class="flex items-center text-navy dark:text-gold font-medium transition-colors">
                             Home
                             <i data-lucide="chevron-down" class="ml-1 w-4 h-4"></i>
                         </button>
                         <div id="home-dropdown" class="dropdown-menu hidden absolute left-0 mt-2 w-48 bg-white dark:bg-gray-900 rounded-md shadow-lg border border-gray-200 dark:border-gray-700 py-1">
                             <a href="index.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">Home 1</a>
-                            <a href="home2.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">Home 2</a>
+                            <a href="home2.html" aria-current="page" class="block px-4 py-2 text-sm text-navy dark:text-gold font-medium">Home 2</a>
                         </div>
                     </div>
                     <a href="about.html" class="text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors">About</a>
@@ -71,7 +72,7 @@
                     <a href="contact.html" class="text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors">Contact</a>
                     <button id="theme-toggle" class="p-2 text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors"><i id="theme-icon" data-lucide="sun" class="w-5 h-5"></i></button>
                     <button id="dir-toggle" class="p-2 text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors"><i id="dir-icon" data-lucide="arrow-right-left" class="w-5 h-5"></i></button>
-                    <a href="contact.html" class="bg-navy dark:bg-gold text-white dark:text-navy px-4 py-2 rounded-md hover:bg-navy-light dark:hover:bg-yellow-600 transition-colors font-medium">Get Started</a>
+                    <a href="contact.html" class="btn btn-primary">Get Started</a>
                 </div>
                 <div class="xl:hidden flex items-center space-x-2">
                     <button id="mobile-menu-btn" class="p-2 text-gray-700 dark:text-gray-300"><i id="mobile-menu-icon" data-lucide="menu" class="w-6 h-6"></i></button>
@@ -81,10 +82,10 @@
         <div id="mobile-menu" class="hidden xl:hidden border-t border-gray-200 dark:border-gray-700">
             <div class="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-900">
                 <div>
-                    <button data-dropdown="mobile-home-dropdown" class="w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md flex items-center justify-between">Home<i data-lucide="chevron-down" class="w-4 h-4"></i></button>
+                    <button data-dropdown="mobile-home-dropdown" aria-current="page" class="w-full text-left px-3 py-2 text-navy dark:text-gold font-medium flex items-center justify-between">Home<i data-lucide="chevron-down" class="w-4 h-4"></i></button>
                     <div id="mobile-home-dropdown" class="dropdown-menu hidden pl-4">
                         <a href="index.html" class="block px-3 py-2 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Home 1</a>
-                        <a href="home2.html" class="block px-3 py-2 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Home 2</a>
+                        <a href="home2.html" aria-current="page" class="block px-3 py-2 text-navy dark:text-gold font-medium">Home 2</a>
                     </div>
                 </div>
                 <a href="about.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">About</a>
@@ -96,7 +97,7 @@
                     <button id="theme-toggle" type="button" aria-label="Toggle theme"><i id="theme-icon" data-lucide="sun" class="w-5 h-5"></i></button>
                     <button id="dir-toggle" type="button" aria-label="Toggle direction"><i id="dir-icon" data-lucide="arrow-right-left" class="w-5 h-5"></i></button>
                 </div>
-                <a href="contact.html" class="mobile-menu-cta">Get Started</a>
+                <a href="contact.html" class="mobile-menu-cta btn btn-primary">Get Started</a>
             </div>
         </div>
     </nav>
@@ -120,11 +121,11 @@
                         Estate planning is about more than assets. It is a chance to make your wishes clear and offer greater direction to the people who matter most.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-3">
-                        <a href="contact.html" class="group inline-flex items-center justify-center gap-2 rounded-lg bg-gold px-6 py-3.5 font-semibold text-navy shadow-lg shadow-black/20 transition hover:bg-yellow-500">
+                        <a href="contact.html" class="group btn btn-primary on-dark">
                             Request a Consultation
                             <i data-lucide="arrow-right" class="h-4 w-4 transition-transform group-hover:translate-x-1"></i>
                         </a>
-                        <a href="services.html" class="inline-flex items-center justify-center rounded-lg border border-white/60 bg-white/5 px-6 py-3.5 font-medium text-white backdrop-blur-sm transition hover:bg-white hover:text-navy">
+                        <a href="services.html" class="btn btn-secondary on-dark">
                             Explore Services
                         </a>
                     </div>
@@ -147,7 +148,7 @@
     </header>
     
     <!-- Service Cards -->
-    <section class="py-12 sm:py-16 bg-white dark:bg-ivory-dark">
+    <section class="py-16 sm:py-20 bg-white dark:bg-ivory-dark">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-semibold text-navy dark:text-gold mb-8 text-center">Estate Planning Services</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -180,7 +181,7 @@
     </section>
 
     <!-- Step-by-step process -->
-    <section class="py-12 sm:py-16 bg-gray-50 dark:bg-gray-900">
+    <section class="py-16 sm:py-20 bg-gray-50 dark:bg-gray-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-semibold text-navy dark:text-gold mb-8 text-center">Step-by-Step Planning Process</h2>
             <div class="space-y-6 max-w-3xl mx-auto">
@@ -209,7 +210,7 @@
     </section>
 
     <!-- Planning for your family -->
-    <section class="home2-image-section py-14 sm:py-20 bg-white dark:bg-ivory-dark">
+    <section class="home2-image-section py-16 sm:py-20 bg-white dark:bg-ivory-dark">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="home2-image-grid grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
                 <div class="home2-image-frame overflow-hidden rounded-2xl shadow-xl shadow-navy/10">
@@ -246,7 +247,7 @@
     </section>
 
     <!-- Property and home -->
-    <section class="home2-image-section py-14 sm:py-20 bg-gray-50 dark:bg-gray-900">
+    <section class="home2-image-section py-16 sm:py-20 bg-gray-50 dark:bg-gray-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="home2-image-grid grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
                 <div class="home2-image-frame lg:order-2 overflow-hidden rounded-2xl shadow-xl shadow-navy/10">
@@ -263,7 +264,7 @@
     </section>
 
     <!-- Text-only: ownership notes -->
-    <section class="py-12 sm:py-14 bg-ivory dark:bg-gray-900">
+    <section class="py-14 sm:py-16 bg-ivory dark:bg-gray-900">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-[1fr_2fr] gap-6 md:gap-12 items-start">
                 <div>
@@ -279,7 +280,7 @@
     </section>
 
     <!-- Assets and finances -->
-    <section class="home2-image-section py-14 sm:py-20 bg-white dark:bg-ivory-dark">
+    <section class="home2-image-section py-16 sm:py-20 bg-white dark:bg-ivory-dark">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="home2-image-grid grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
                 <div class="home2-image-frame overflow-hidden rounded-2xl shadow-xl shadow-navy/10">
@@ -316,7 +317,7 @@
     </section>
 
     <!-- Documenting wishes -->
-    <section class="home2-image-section py-14 sm:py-20 bg-gray-50 dark:bg-gray-900">
+    <section class="home2-image-section py-16 sm:py-20 bg-gray-50 dark:bg-gray-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="home2-image-grid grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
                 <div class="home2-image-frame lg:order-2 overflow-hidden rounded-2xl shadow-xl shadow-navy/10">
@@ -338,12 +339,12 @@
             <i data-lucide="notebook-pen" class="w-8 h-8 text-gold mx-auto mb-4"></i>
             <h2 class="text-3xl sm:text-4xl font-semibold text-navy dark:text-gold mb-5">Clear records make a plan easier to follow</h2>
             <p class="max-w-2xl mx-auto text-gray-600 dark:text-gray-400 leading-relaxed mb-7">Keep important documents organized, let the appropriate people know where they can be found, and review them with qualified professionals when your circumstances or local requirements change.</p>
-            <a href="services.html#document-review" class="inline-flex items-center gap-2 rounded-lg border border-navy/25 dark:border-gold/40 px-5 py-3 font-medium text-navy dark:text-gold hover:bg-navy/5 dark:hover:bg-gold/10 transition-colors">Learn about document review<i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+            <a href="services.html#document-review" class="btn btn-secondary">Learn about document review<i data-lucide="arrow-right" class="w-4 h-4"></i></a>
         </div>
     </section>
 
     <!-- Plan reviews -->
-    <section class="home2-image-section py-14 sm:py-20 bg-white dark:bg-ivory-dark">
+    <section class="home2-image-section py-16 sm:py-20 bg-white dark:bg-ivory-dark">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="home2-image-grid grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
                 <div class="home2-image-frame overflow-hidden rounded-2xl shadow-xl shadow-navy/10">
@@ -360,7 +361,7 @@
     </section>
     
     <!-- Important Planning Considerations -->
-    <section class="py-12 sm:py-16 bg-white dark:bg-ivory-dark">
+    <section class="py-16 sm:py-20 bg-white dark:bg-ivory-dark">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-semibold text-navy dark:text-gold mb-8 text-center">Important Planning Considerations</h2>
             <div class="grid md:grid-cols-3 gap-6">
@@ -374,7 +375,7 @@
     <section class="home2-cta py-14 sm:py-16">
         <div class="home2-cta-card max-w-7xl mx-auto px-6 sm:px-10 py-9 sm:py-12">
             <div><span class="text-sm font-semibold uppercase tracking-wider text-sage dark:text-gold">Your next step</span><h2 class="text-3xl sm:text-4xl font-semibold text-navy dark:text-gold mt-3 mb-3">Your plan starts with what matters to you.</h2><p class="text-gray-600 dark:text-gray-300 leading-relaxed">Bring your questions and priorities to a thoughtful first conversation.</p><p class="text-xs text-gray-500 dark:text-gray-400 mt-4">General information only; not legal advice. Requirements vary by jurisdiction.</p></div>
-            <a href="contact.html" class="inline-flex items-center justify-center gap-2 rounded-lg bg-gold px-6 py-3 font-semibold text-navy hover:bg-yellow-600 transition-colors">Request a Consultation<i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+            <a href="contact.html" class="btn btn-primary">Request a Consultation<i data-lucide="arrow-right" class="w-4 h-4"></i></a>
         </div>
     </section>
     
@@ -387,7 +388,7 @@
                 <div><h4 class="text-white font-medium mb-3">Services</h4><ul class="space-y-2 text-sm"><li><a href="services.html#will-drafting" class="hover:text-gold">Will Drafting</a></li><li><a href="services.html#trust-planning" class="hover:text-gold">Trust Planning</a></li><li><a href="services.html#estate-planning" class="hover:text-gold">Estate Planning Guidance</a></li><li><a href="services.html#document-review" class="hover:text-gold">Estate Document Review</a></li></ul></div>
                 <div><h4 class="text-white font-medium mb-3">Information</h4><p class="text-sm mb-2">Office Hours: Mon-Fri 9:00-17:00</p><p class="text-sm mb-2">Email: info@legacywise.example</p><p class="text-sm">Phone: (555) 123-4567</p></div>
             </div>
-            <section class="footer-newsletter" aria-labelledby="footer-newsletter-heading"><div><h4 id="footer-newsletter-heading">A little planning wisdom, now and then</h4><p>Get thoughtful prompts and practical estate-planning resources in your inbox.</p></div><div><form class="footer-newsletter-form"><label class="sr-only" for="footer-newsletter-email">Email address</label><input id="footer-newsletter-email" name="email" type="email" autocomplete="email" placeholder="Your email address" required><button type="submit">Join the newsletter</button></form><p class="footer-newsletter-status" aria-live="polite"></p><p class="text-xs">Demo signup only; no email is sent or stored.</p></div></section>
+            <section class="footer-newsletter" aria-labelledby="footer-newsletter-heading"><div><h4 id="footer-newsletter-heading">A little planning wisdom, now and then</h4><p>Get thoughtful prompts and practical estate-planning resources in your inbox.</p></div><div><form class="footer-newsletter-form"><label class="sr-only" for="footer-newsletter-email">Email address</label><input id="footer-newsletter-email" name="email" type="email" autocomplete="email" placeholder="Your email address" required><button type="submit" class="btn btn-primary">Join the newsletter</button></form><p class="footer-newsletter-status" aria-live="polite"></p><p class="text-xs">Demo signup only; no email is sent or stored.</p></div></section>
             <div class="footer-bottom border-t border-gray-800 mt-8 pt-6 text-center text-sm"><p>&copy; 2026 LegacyWise. All rights reserved.</p></div>
         </div>
     </footer>

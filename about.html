@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
     <link href="assets/typography.css" rel="stylesheet">
+    <link href="assets/buttons.css" rel="stylesheet">
     <link href="assets/navigation.css" rel="stylesheet">
     <link href="assets/footer.css" rel="stylesheet">
     <link href="assets/cta-variants.css" rel="stylesheet">
@@ -25,7 +26,7 @@
     <nav class="site-nav bg-white dark:bg-gray-900 shadow-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <a href="index.html" class="inline-flex items-center gap-2 text-xl font-semibold text-navy dark:text-gold" aria-label="LegacyWise home"><img src="assets/icons/legacywise-logo.svg" alt="" class="h-9 w-9"><span>LegacyWise</span></a>
+                <div class="flex-shrink-0"><a href="index.html" class="inline-flex items-center gap-2 text-xl font-semibold text-navy dark:text-gold" aria-label="LegacyWise home"><img src="assets/icons/legacywise-logo.svg" alt="" class="h-9 w-9"><span>LegacyWise</span></a></div>
                 <div class="hidden xl:flex items-center space-x-6">
                     <div class="relative">
                         <button data-dropdown="home-dropdown" class="flex items-center text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors">Home<i data-lucide="chevron-down" class="ml-1 w-4 h-4"></i></button>
@@ -41,7 +42,7 @@
                     <a href="contact.html" class="text-gray-700 dark:text-gray-300 hover:text-navy dark:hover:text-gold transition-colors">Contact</a>
                     <button id="theme-toggle" class="p-2 text-gray-700 dark:text-gray-300" aria-label="Toggle theme"><i id="theme-icon" data-lucide="sun" class="w-5 h-5"></i></button>
                     <button id="dir-toggle" class="p-2 text-gray-700 dark:text-gray-300" aria-label="Toggle direction"><i id="dir-icon" data-lucide="arrow-right-left" class="w-5 h-5"></i></button>
-                    <a href="contact.html" class="bg-navy dark:bg-gold text-white dark:text-navy px-4 py-2 rounded-md hover:bg-navy-light dark:hover:bg-yellow-600 transition-colors font-medium">Get Started</a>
+                    <a href="contact.html" class="btn btn-primary">Get Started</a>
                 </div>
                 <div class="xl:hidden flex items-center space-x-2">
                     <button id="mobile-menu-btn" class="p-2 text-gray-700 dark:text-gray-300" aria-label="Open navigation menu"><i id="mobile-menu-icon" data-lucide="menu" class="w-6 h-6"></i></button>
@@ -63,7 +64,7 @@
                     <button id="theme-toggle" type="button" aria-label="Toggle theme"><i id="theme-icon" data-lucide="sun" class="w-5 h-5"></i></button>
                     <button id="dir-toggle" type="button" aria-label="Toggle direction"><i id="dir-icon" data-lucide="arrow-right-left" class="w-5 h-5"></i></button>
                 </div>
-                <a href="contact.html" class="mobile-menu-cta">Get Started</a>
+                <a href="contact.html" class="mobile-menu-cta btn btn-primary">Get Started</a>
             </div>
         </div>
     </nav>
@@ -73,7 +74,7 @@
             <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1800&h=900&fit=crop" alt="Modern professional office interior" class="absolute inset-0 -z-20 h-full w-full object-cover" fetchpriority="high">
             <div class="absolute inset-0 -z-10 bg-gradient-to-r from-ivory/95 via-white/90 to-ivory/65 dark:from-gray-900/95 dark:via-gray-900/85 dark:to-gray-900/65" aria-hidden="true"></div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="max-w-3xl">
+                <div class="max-w-3xl mx-auto text-center">
                     <span class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-sage dark:text-gold mb-5"><i data-lucide="landmark" class="w-4 h-4"></i>About LegacyWise</span>
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight text-navy dark:text-gold mb-6">Planning with people, purpose, and peace of mind.</h1>
                     <p class="text-lg sm:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">We believe planning for the future should feel clear, considered, and centered on the people and priorities that matter to you.</p>
@@ -197,7 +198,7 @@
         <section class="about-cta-section py-14 sm:py-16">
             <div class="about-cta-card max-w-7xl mx-auto px-6 sm:px-10 py-9 sm:py-12">
                 <div><span class="text-sm font-semibold uppercase tracking-wider text-sage dark:text-gold">A thoughtful beginning</span><h2 class="text-3xl sm:text-4xl font-semibold text-navy dark:text-gold mt-3 mb-3">Let’s start with what matters to you.</h2><p class="text-gray-600 dark:text-gray-300 leading-relaxed">Bring your questions and priorities. We’ll help you find a clear place to begin.</p><p class="text-xs text-gray-500 dark:text-gray-400 mt-4">General information only; not legal advice. Requirements vary by jurisdiction.</p></div>
-                <a href="contact.html" class="inline-flex items-center gap-2 rounded-lg bg-navy dark:bg-gold px-6 py-3 font-semibold text-white dark:text-navy hover:bg-navy-light dark:hover:bg-yellow-600 transition-colors">Request a Consultation<i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                <a href="contact.html" class="btn btn-primary">Request a Consultation<i data-lucide="arrow-right" class="w-4 h-4"></i></a>
             </div>
         </section>
     </main>
@@ -210,7 +211,7 @@
                 <div><h4 class="text-white font-medium mb-3">Services</h4><ul class="space-y-2 text-sm"><li><a href="services.html#will-drafting" class="hover:text-gold">Will Drafting</a></li><li><a href="services.html#trust-planning" class="hover:text-gold">Trust Planning</a></li><li><a href="services.html#estate-planning" class="hover:text-gold">Estate Planning Guidance</a></li><li><a href="services.html#document-review" class="hover:text-gold">Estate Document Review</a></li></ul></div>
                 <div><h4 class="text-white font-medium mb-3">Information</h4><p class="text-sm mb-2">Office Hours: Mon-Fri 9:00-17:00</p><p class="text-sm mb-2">Email: info@legacywise.example</p><p class="text-sm">Phone: (555) 123-4567</p></div>
             </div>
-            <section class="footer-newsletter" aria-labelledby="footer-newsletter-heading"><div><h4 id="footer-newsletter-heading">A little planning wisdom, now and then</h4><p>Get thoughtful prompts and practical estate-planning resources in your inbox.</p></div><div><form class="footer-newsletter-form"><label class="sr-only" for="footer-newsletter-email">Email address</label><input id="footer-newsletter-email" name="email" type="email" autocomplete="email" placeholder="Your email address" required><button type="submit">Join the newsletter</button></form><p class="footer-newsletter-status" aria-live="polite"></p><p class="text-xs">Demo signup only; no email is sent or stored.</p></div></section>
+            <section class="footer-newsletter" aria-labelledby="footer-newsletter-heading"><div><h4 id="footer-newsletter-heading">A little planning wisdom, now and then</h4><p>Get thoughtful prompts and practical estate-planning resources in your inbox.</p></div><div><form class="footer-newsletter-form"><label class="sr-only" for="footer-newsletter-email">Email address</label><input id="footer-newsletter-email" name="email" type="email" autocomplete="email" placeholder="Your email address" required><button type="submit" class="btn btn-primary">Join the newsletter</button></form><p class="footer-newsletter-status" aria-live="polite"></p><p class="text-xs">Demo signup only; no email is sent or stored.</p></div></section>
             <div class="footer-bottom border-t border-gray-800 mt-8 pt-6 text-center text-sm"><p>&copy; 2026 LegacyWise. All rights reserved.</p></div>
         </div>
     </footer>

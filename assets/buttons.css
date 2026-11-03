@@ -1,0 +1,141 @@
+/* LegacyWise button system — exactly two variants: .btn-primary and .btn-secondary */
+
+:root {
+  /* Brand palette */
+  --lw-navy: #1a365d;
+  --lw-navy-light: #2d4a6b;
+  --lw-navy-deep: #101d2c;
+  --lw-gold: #b8944a;
+  --lw-gold-light: #e5c783;
+  --lw-gold-dark: #7f5f24;
+  --lw-sage: #4a5d4a;
+  --lw-ivory: #f8f6f0;
+  --lw-ivory-dark: #1a1814;
+  --lw-ivory-tint: #f1eee5;
+  --lw-ivory-deep: #e8e4d9;
+  --lw-dark-surface: #202b39;
+
+  /* Button tokens (shared by every button on the site) */
+  --btn-radius: 0.65rem;
+  --btn-height: 3rem;
+  --btn-padding-block: 0.75rem;
+  --btn-padding-inline: 1.5rem;
+  --btn-gap: 0.5rem;
+  --btn-font-weight: 600;
+}
+
+/* Base — shared geometry and treatment for both variants */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--btn-gap);
+  min-height: var(--btn-height);
+  padding: var(--btn-padding-block) var(--btn-padding-inline);
+  border: 1px solid transparent;
+  border-radius: var(--btn-radius);
+  font-weight: var(--btn-font-weight);
+  line-height: 1.25;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease,
+    box-shadow 160ms ease, transform 160ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--lw-gold);
+  outline-offset: 3px;
+}
+
+/* Primary — solid brand fill (light surfaces) */
+.btn-primary {
+  background: var(--lw-navy);
+  border-color: var(--lw-navy);
+  color: #fff;
+  box-shadow: 0 6px 16px rgb(26 54 93 / 0.16);
+}
+
+.btn-primary:hover {
+  background: var(--lw-navy-light);
+  border-color: var(--lw-navy-light);
+}
+
+.dark .btn-primary {
+  background: var(--lw-gold);
+  border-color: var(--lw-gold);
+  color: var(--lw-ivory-dark);
+  box-shadow: 0 6px 16px rgb(184 148 74 / 0.2);
+}
+
+.dark .btn-primary:hover {
+  background: var(--lw-gold-light);
+  border-color: var(--lw-gold-light);
+}
+
+/* Primary on dark / navy surfaces — gold fill in both modes */
+.btn-primary.on-dark,
+.dark .btn-primary.on-dark {
+  background: var(--lw-gold);
+  border-color: var(--lw-gold);
+  color: var(--lw-ivory-dark);
+  box-shadow: 0 6px 16px rgb(0 0 0 / 0.22);
+}
+
+.btn-primary.on-dark:hover,
+.dark .btn-primary.on-dark:hover {
+  background: var(--lw-gold-light);
+  border-color: var(--lw-gold-light);
+}
+
+/* Secondary — outline (light surfaces) */
+.btn-secondary {
+  background: transparent;
+  border-color: rgb(26 54 93 / 0.35);
+  color: var(--lw-navy);
+  box-shadow: none;
+}
+
+.btn-secondary:hover {
+  background: rgb(26 54 93 / 0.06);
+  border-color: var(--lw-navy);
+}
+
+.dark .btn-secondary {
+  border-color: rgb(184 148 74 / 0.45);
+  color: var(--lw-gold);
+}
+
+.dark .btn-secondary:hover {
+  background: rgb(184 148 74 / 0.1);
+  border-color: var(--lw-gold);
+}
+
+/* Secondary on dark / navy surfaces — white outline in both modes */
+.btn-secondary.on-dark,
+.dark .btn-secondary.on-dark {
+  background: transparent;
+  border-color: rgb(255 255 255 / 0.6);
+  color: #fff;
+  box-shadow: none;
+}
+
+.btn-secondary.on-dark:hover,
+.dark .btn-secondary.on-dark:hover {
+  background: #fff;
+  border-color: #fff;
+  color: var(--lw-navy);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition-duration: 0.01ms !important;
+  }
+
+  .btn:hover {
+    transform: none;
+  }
+}
